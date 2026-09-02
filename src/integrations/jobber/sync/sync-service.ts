@@ -1,0 +1,8 @@
+import { definitions, type Resource, type SyncResourceDefinition } from '../types/entities.js';
+import type { JobberGraphQLClient, Connection } from '../graphql/client.js';
+import type { MirrorRepository } from '../../../database/repositories/mirror-repository.js';
+export class JobberSyncService {
+ constructor(private client:JobberGraphQLClient,private repository:MirrorRepository,private log:Pick<Console,'info'|'error'>=console){}
+ async syncAll(resources:Resource[]=definitions.map((x)=>x.resource)):Promise<Record<string,number>>{const result:Record<string,number>={}; for(const resource of resources){const definition=definitions.find((d)=>d.resource===resource);if(!definition)continue;result[resource]=await this.syncResource(definition);} return result;}
+ async syncResource(definition:SyncResourceDefinition):Promise<number>{await this.repository.start(definition.resource);this.log.info(JSON.stringify({event:'sync_resource_started',resource:definition.resource}));let count=0;try{const nodes=await this.client.paginate<Record<string,any>>(async(cursor)=>{const data=await this.client.request<Record<string,Connection<Record<string,any>>>>(definition.query,{cursor});return data[definition.connectionKey]!;});for(const node of nodes){await this.repository.upsert(definition.resource,definition.map(node));count++;}await this.repository.finish(definition.resource,count);this.log.info(JSON.stringify({event:'sync_resource_completed',resource:definition.resource,records:count}));return count;}catch(error){await this.repository.fail(definition.resource,error instanceof Error?error.message:'Unknown sync error');this.log.error(JSON.stringify({event:'sync_failed',resource:definition.resource}));throw error;}}
+}

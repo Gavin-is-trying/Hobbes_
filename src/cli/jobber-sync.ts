@@ -1,0 +1,1 @@
+import { bootstrap } from '../bootstrap.js';const x=bootstrap();try{console.info(JSON.stringify({event:'sync_started'}));const counts=await x.sync.syncAll();console.info(JSON.stringify({event:'sync_completed',counts}));}finally{await x.pool.end();}
