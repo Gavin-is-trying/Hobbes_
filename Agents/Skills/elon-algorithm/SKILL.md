@@ -143,6 +143,19 @@ Challenge the draft itself:
 
 Revise the draft before delivering it.
 
+## Repository Intake Convention
+
+For lifecycle processes in this repository, use these directories within the applicable stage:
+
+- `intake/` for human-created, unverified source material.
+- `reviews/` for the Elon Algorithm analysis and future-state proposal.
+- `decisions/` for the persistent decision log.
+- `SOPs/` for proposed and approved executable documents.
+
+Use `templates/raw-process-intake.md` for speech-to-text and stream-of-consciousness input. Treat raw intake as qualitative evidence rather than an authoritative process. Preserve the original intake, distinguish observations from assumptions and requirements, and write generated artifacts to the sibling directories named above.
+
+Never put process content in `.gitkeep`; it is only a placeholder for an empty directory. Follow the repository-wide handling, naming, status, and privacy guidance in `PROCESS-DOCUMENTATION-GUIDE.md` when available.
+
 ## Required Outputs
 
 Unless the user asks for a narrower artifact, produce:
