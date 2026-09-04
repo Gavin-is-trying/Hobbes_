@@ -1,9 +1,9 @@
 ---
 name: process-mapping
 description: >
-  Visualize and document current and future business processes. Identify
-  inefficiencies, dependencies, and improvement opportunities through detailed
-  process mapping and analysis.
+  Visualize and document current and future business processes, routed through
+  the Elon Algorithm to challenge requirements, delete unnecessary work,
+  simplify, accelerate, and automate last.
 ---
 
 # Process Mapping
@@ -19,6 +19,14 @@ description: >
 ## Overview
 
 Process mapping creates visual representations of workflows, helping teams understand current operations, identify bottlenecks, and design improvements.
+
+## Mandatory Elon Algorithm Gate
+
+For every business-process mapping or redesign request, load and follow `../elon-algorithm/SKILL.md` as the default orchestrator. Do not jump directly from a bottleneck to optimization or automation. Challenge the underlying requirements, attempt deletion, simplify surviving work, accelerate flow, and automate only at the end.
+
+Use a strong posture: presume requirements, approvals, handoffs, fields, reports, meetings, tools, and steps are unnecessary until justified by an accountable owner and credible evidence. Present recommendations, then continue autonomously into the future-state draft and decision log.
+
+When this skill is invoked by `elon-algorithm` to perform current-state discovery or future-state design, do not restart the orchestration workflow. Complete the requested mapping phase and return its artifacts to the orchestrator.
 
 ## When to Use
 

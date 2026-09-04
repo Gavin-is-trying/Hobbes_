@@ -1,7 +1,7 @@
 ---
 name: process-docs
 description: When the user needs to create SOPs, playbooks, runbooks, or other operational documentation that defines how a recurring process should be executed.
-related: [support-docs, board-update]
+related: [elon-algorithm, support-docs, board-update]
 reads: [startup-context]
 ---
 
@@ -13,6 +13,14 @@ Activate when a founder or operator needs to document an internal process so it 
 ## Context Required
 - **From startup-context:** company stage, team size, current tools and systems, organizational structure, compliance requirements.
 - **From the user:** the process to document, who owns and executes it, current pain points or failure modes, frequency of execution, tools involved, and whether this replaces an existing (undocumented) process or is net-new.
+
+## Mandatory Elon Algorithm Gate
+
+For every new or revised business process document, load and follow `../elon-algorithm/SKILL.md` before drafting. Do not merely formalize the process presented by the user. First challenge its requirements, attempt deletion, simplify what survives, reduce cycle time, and consider automation last.
+
+Present recommendations and then continue autonomously into the appropriate document template. Preserve material decisions in the orchestrator's decision log. Treat legal, regulatory, contractual, safety, financial-control, employment, privacy, security, and explicit customer requirements as strong challenge targets that require verification before removal—not as automatic exemptions and not as items that may be silently discarded.
+
+When this skill is invoked by `elon-algorithm` for the final documentation phase, do not restart the orchestration workflow. Confirm that the upstream requirement challenge, deletion pass, future-state map, and decision log exist, then draft and adversarially review the final SOP, runbook, or playbook.
 
 ## Workflow
 1. **Identify document type** — Determine whether this is an operational SOP (routine procedure), an incident runbook (reactive response), or an onboarding playbook (sequential learning path). Each uses a different template.
