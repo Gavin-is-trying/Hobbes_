@@ -1,2 +1,0 @@
-import { bootstrap } from './bootstrap.js';import { buildApp } from './app.js';import { WebhookWorker } from './jobs/webhook-worker.js';
-const deps=bootstrap();const app=await buildApp(deps);const worker=new WebhookWorker(deps.events,deps.sync,deps.config.workerIntervalMs,app.log);worker.start();const close=async()=>{worker.stop();await app.close();await deps.pool.end();};process.on('SIGTERM',()=>void close());process.on('SIGINT',()=>void close());await app.listen({host:deps.config.host,port:deps.config.port});app.log.info({event:'server_started',port:deps.config.port});
