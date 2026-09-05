@@ -11,8 +11,6 @@ flowchart TD
         hiringOwner["Hiring Owner"]
         onboardingOwner["Onboarding Owner"]
 
-        C --> hiringOwner
-        C --> onboardingOwner
     end
 
     subgraph BB["Operations"]
@@ -32,8 +30,6 @@ flowchart TD
         leadIntakeOwner["Lead Intake Owner"]
         estimator["Estimator"]
 
-        E --> leadIntakeOwner
-        E --> estimator
     end
 
 
