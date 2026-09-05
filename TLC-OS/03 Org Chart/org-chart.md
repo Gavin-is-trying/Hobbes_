@@ -7,9 +7,9 @@ flowchart TD
 
     subgraph AA["Admin"]
         direction TB
-        C["People Manager"]
-        hiringOwner["Hiring Owner"]
-        onboardingOwner["Onboarding Owner"]
+        C1["People Manager"]
+        C2["Hiring Owner"]
+        C3["Onboarding Owner"]
 
     end
 
@@ -34,7 +34,9 @@ flowchart TD
 
 
     A --> B
-    B --> C
+    B --> C1
+    B --> C2
+    B --> C3
     B --> D
     B --> E
 ```
