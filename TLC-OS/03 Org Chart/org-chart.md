@@ -7,15 +7,15 @@ flowchart TD
 
     subgraph AA["Admin"]
         direction TB
-        C1["Finance"]
-        C2["HR"]
-        C3["CTO"]
+        C1["Finance — Gavin"]
+        C2["HR — Gavin"]
+        C3["CTO — Gavin"]
 
     end
 
     subgraph BB["Operations"]
         direction TB
-        D1["COO"]
+        D1["COO — Gavin"]
         D2["Maintenance Crew Leader"]
         D3["Applicator Crew Leader"]
         D4["Advanced Maintenance Tech"]
@@ -36,9 +36,9 @@ flowchart TD
 
    subgraph CC["Leads"]
         direction TB
-        E1["Creative Director"]
-        E2["Receptionist"]
-        E3["Estimator"]
+        E1["Creative Director — Gavin"]
+        E2["Receptionist — Gavin"]
+        E3["Estimator — Gavin"]
 
     end
 
