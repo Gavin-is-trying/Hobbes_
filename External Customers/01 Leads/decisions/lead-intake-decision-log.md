@@ -5,8 +5,9 @@ area: external-customers
 stage: 01-leads
 status: active
 created_at: 2026-09-04
-process_owner: unassigned
+process_owner: lead-intake-owner
 source_review: ../reviews/2026-09-04-lead-intake-elon-review.md
+org_chart: ../../../TLC-OS/03 Org Chart/org-chart.md
 ---
 
 # Lead Intake — Decision Log
@@ -26,10 +27,11 @@ Never delete historical entries. When evidence or a decision changes, add a new 
 | D-009 | 2026-09-04 | Cycle-time target | Not defined | No baseline supplied | MEASURE BEFORE ACCELERATING | Unassigned | Avoid arbitrary SLA and expose waiting time | Timestamp receipt, assignment, contact, transition, and closure | Unscheduled | — |
 | D-010 | 2026-09-04 | Lead automation | No current automation described | Workflow, volume, system, and baseline absent | REJECT AUTOMATION FOR NOW | Unassigned | Avoid automating an unvalidated taxonomy or process | Reassess after minimal manual pilot | Unscheduled | — |
 | D-011 | 2026-09-04 | Contact permissions and restrictions | Not described | Potential privacy, marketing, contractual, and channel obligations | VERIFY BEFORE REMOVAL | Unassigned | Protect prospects and the business | Qualified review by applicable jurisdiction and channel | Unscheduled | — |
+| D-012 | 2026-09-04 | Stable lead-intake process owner | D-008 retained the need for one owner but left it unassigned | `TLC-OS/03 Org Chart/org-chart.md` defines a `Lead Intake Owner` role | ASSIGN the `Lead Intake Owner` role as process owner; keep the document proposed until its human seat holder and escalation path are confirmed | Lead Intake Owner | Tie the process to a stable role rather than a person's name | Confirm the organization chart seat holder and reporting relationship | Unscheduled | D-008 |
 
 ## Unresolved Decisions
 
-- Assign the accountable process owner.
+- Confirm the human seat holder and reporting relationship for the `Lead Intake Owner` role.
 - Define the system of record.
 - Verify the next lifecycle stage and its entry criteria.
 - Verify outreach permission, opt-out, and do-not-contact rules by channel and jurisdiction.

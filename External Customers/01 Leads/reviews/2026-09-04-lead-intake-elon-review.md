@@ -5,8 +5,9 @@ area: external-customers
 stage: 01-leads
 status: proposed
 reviewed_at: 2026-09-04
-process_owner: unassigned
+process_owner: lead-intake-owner
 source: ../intake/2026-09-04-lead-intake-transcript.md
+org_chart: ../../../TLC-OS/03 Org Chart/org-chart.md
 confidence: low
 ---
 
@@ -29,7 +30,7 @@ confidence: low
 - **Proposed terminal state:** The lead has an assigned next action and owner, or is closed with a reason and any contact restriction recorded.
 - **In scope:** Entry into the lead workflow, minimal capture, duplicate check, initial fit decision, ownership, and next action.
 - **Out of scope:** Campaign design, ad purchasing, content creation, detailed assessment, estimating, and production.
-- **Owner:** Unknown; must be assigned before approval.
+- **Owner:** `Lead Intake Owner`, based on the organization chart; the human seat holder and reporting relationship remain unconfirmed.
 
 ## 2. Transcript Extraction
 
@@ -70,12 +71,12 @@ Because these facts are absent, no current-state cycle-time or bottleneck claim 
 
 | ID | Original requirement or assumption | Accountable owner | Source/evidence | Protected outcome | Smallest valid form | Decision |
 |---|---|---|---|---|---|---|
-| R-001 | Anyone contactable is a lead. | Unassigned | External framework cited; no operational evidence | Maintain a large prospect pool | A lead is a contactable person or organization with plausible service fit and an authorized, owned next action. | CHALLENGE / REWRITE |
-| R-002 | All leads must fit one of four warm/cold and one-to-one/one-to-many categories. | Unassigned | Conceptual model only | Understand acquisition motion | Store relationship temperature and interaction scale only when they support a decision or useful analysis. | COMBINE |
-| R-003 | Personal phone contacts should be used as warm leads. | Unassigned | Example only | Start outreach quickly | Select only relevant contacts for whom outreach is appropriate and permitted; do not bulk-import by default. | VERIFY BEFORE REMOVAL |
-| R-004 | Advertising, marketing, and leads need separate processes. | Unassigned | No evidence | Clarify ownership and work | Keep definitions separate; create a process only for recurring work with a distinct trigger, outcome, and owner. | DELETE AS CURRENT REQUIREMENT |
-| R-005 | Each legitimate lead needs a next action or closure decision. | Unassigned | Proposed operating control | Prevent dropped inquiries and ambiguous ownership | Record one owner and one next action, or close with a reason. | RETAIN, OWNER REQUIRED |
-| R-006 | Contact restrictions must be respected. | Unassigned | Exact legal and policy sources not provided | Protect privacy, trust, and compliance | Check and record applicable permission, opt-out, and do-not-contact constraints before outreach. | VERIFY BEFORE REMOVAL |
+| R-001 | Anyone contactable is a lead. | Lead Intake Owner | External framework cited; no operational evidence | Maintain a large prospect pool | A lead is a contactable person or organization with plausible service fit and an authorized, owned next action. | CHALLENGE / REWRITE |
+| R-002 | All leads must fit one of four warm/cold and one-to-one/one-to-many categories. | Lead Intake Owner | Conceptual model only | Understand acquisition motion | Store relationship temperature and interaction scale only when they support a decision or useful analysis. | COMBINE |
+| R-003 | Personal phone contacts should be used as warm leads. | Lead Intake Owner | Example only | Start outreach quickly | Select only relevant contacts for whom outreach is appropriate and permitted; do not bulk-import by default. | VERIFY BEFORE REMOVAL |
+| R-004 | Advertising, marketing, and leads need separate processes. | Lead Intake Owner | No evidence | Clarify ownership and work | Keep definitions separate; create a process only for recurring work with a distinct trigger, outcome, and owner. | DELETE AS CURRENT REQUIREMENT |
+| R-005 | Each legitimate lead needs a next action or closure decision. | Lead Intake Owner | Proposed operating control | Prevent dropped inquiries and ambiguous ownership | Record one owner and one next action, or close with a reason. | RETAIN, OWNER REQUIRED |
+| R-006 | Contact restrictions must be respected. | Lead Intake Owner | Exact legal and policy sources not provided | Protect privacy, trust, and compliance | Check and record applicable permission, opt-out, and do-not-contact constraints before outreach. | VERIFY BEFORE REMOVAL |
 
 ## 5. Delete
 
@@ -194,7 +195,7 @@ After the pilot, delete any field nobody used, revise ambiguous fit rules, and a
 
 | Item | Why unresolved | Required owner or expert | Safe interim approach |
 |---|---|---|---|
-| Process owner | No owner named | Business owner | Keep status `proposed`; assign explicitly before approval. |
+| Lead Intake Owner seat holder and reporting line | The role exists in the organization chart but has no named occupant or reporting arrow | Integrator / organization-chart owner | Keep the role as process owner; confirm its occupant and escalation path before approval. |
 | System of record | No tool named | Process owner | Use one designated temporary location; do not duplicate lists. |
 | Next lifecycle stage | Sequence not described | Sales/process owner | Record a generic next action until stage criteria are defined. |
 | Contact permission and restrictions | Jurisdiction, channels, policies, and consent not supplied | Qualified legal/compliance owner | Do not bulk-message or import personal contacts; honor known opt-outs. |
@@ -206,7 +207,7 @@ After the pilot, delete any field nobody used, revise ambiguous fit rules, and a
 
 | Category | Score | Reason |
 |---|---:|---|
-| Outcome | 1 | Proposed but not confirmed by an owner. |
+| Outcome | 2 | Proposed outcome and stable process-owner role are explicit; the role's seat holder is unresolved. |
 | Requirements | 1 | Requirements challenged; ownership and external sources unresolved. |
 | Deletion | 2 | Explicit deletion pass completed. |
 | Safety | 2 | Sensitive outreach constraints are flagged for verification. |
@@ -217,6 +218,6 @@ After the pilot, delete any field nobody used, revise ambiguous fit rules, and a
 | Measurement | 1 | Definitions proposed; owners, baselines, and targets absent. |
 | History | 2 | Decision log created. |
 
-- **Score:** 15/20
-- **Hard stops:** Process owner unassigned; binding outreach rules unverified; success baseline absent.
+- **Score:** 16/20
+- **Hard stops:** Lead Intake Owner seat holder and escalation path unresolved; binding outreach rules unverified; success baseline absent.
 - **Disposition:** Useful proposed draft, not ready for approval or automation.

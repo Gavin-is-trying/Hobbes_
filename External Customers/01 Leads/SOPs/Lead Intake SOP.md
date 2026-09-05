@@ -4,17 +4,18 @@ process: lead-intake
 area: external-customers
 stage: 01-leads
 status: proposed
-version: 0.1
+version: 0.2
 created_at: 2026-09-04
-process_owner: unassigned
+process_owner: lead-intake-owner
 review_cadence: unset
 source_review: ../reviews/2026-09-04-lead-intake-elon-review.md
+org_chart: ../../../TLC-OS/03 Org Chart/org-chart.md
 decision_log: ../decisions/lead-intake-decision-log.md
 ---
 
 # Lead Intake — Standard Operating Procedure
 
-> **Status: PROPOSED.** Do not treat this document as approved until the accountable process owner, system of record, next-stage criteria, and applicable outreach restrictions are verified.
+> **Status: PROPOSED.** Do not treat this document as approved until the `Lead Intake Owner` seat holder and escalation path, system of record, next-stage criteria, and applicable outreach restrictions are verified.
 
 ## Purpose
 
@@ -36,9 +37,9 @@ This SOP does not cover campaign design, advertising purchases, content creation
 
 ## Ownership
 
-- **Process owner:** Unassigned — must be named before approval
-- **Executor:** Unassigned
-- **Approver:** Required only for approval of this SOP or a verified exception; no routine lead approval is currently justified
+- **Process owner:** `Lead Intake Owner` — stable role exists in the organization chart; human seat holder and reporting relationship remain unconfirmed
+- **Executor:** `Lead Intake Owner` until execution is explicitly delegated
+- **Approver:** Unassigned for approval of this SOP or a verified exception; no routine per-lead approval is currently justified
 - **Consulted:** Qualified owner for applicable privacy, marketing, contractual, and contact restrictions
 
 ## Prerequisites
@@ -46,7 +47,7 @@ This SOP does not cover campaign design, advertising purchases, content creation
 Before using this process:
 
 1. Designate one system of record for active leads.
-2. Assign the person or role responsible for new-lead ownership.
+2. Confirm the person occupying the `Lead Intake Owner` role and its escalation path.
 3. Verify applicable permission, opt-out, and do-not-contact rules by outreach channel and jurisdiction.
 4. Define the minimum service-fit criteria.
 5. Define the next lifecycle stage and its entry criteria.
@@ -179,8 +180,9 @@ Label manually reconstructed values as estimates. Assign an owner and definition
 
 ## Approval Checklist
 
-- [ ] Accountable process owner assigned
-- [ ] Executor role assigned
+- [x] Accountable process-owner role assigned
+- [ ] `Lead Intake Owner` human seat holder and escalation path confirmed
+- [x] Default executor role assigned
 - [ ] System of record named
 - [ ] Initial fit criteria defined
 - [ ] Next lifecycle stage and entry criteria verified
@@ -194,3 +196,4 @@ Label manually reconstructed values as estimates. Assign an owner and definition
 | Date | Author | Change |
 |---|---|---|
 | 2026-09-04 | Agent draft | Created proposed SOP from raw intake and Elon Algorithm review. |
+| 2026-09-04 | Agent revision | Assigned the organization chart's `Lead Intake Owner` role as process owner; left its seat holder and escalation path unresolved. |
