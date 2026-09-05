@@ -26,9 +26,9 @@ flowchart TD
 
    subgraph CC["Leads"]
         direction TB
-        E["Sale Manager"]
-        leadIntakeOwner["Lead Intake Owner"]
-        estimator["Estimator"]
+        E1["Sale Manager"]
+        E2["Receptionist"]
+        E3["Estimator"]
 
     end
 
@@ -38,5 +38,7 @@ flowchart TD
     B --> C2
     B --> C3
     B --> D
-    B --> E
+    B --> E1
+    B --> E2
+    B --> E3
 ```
