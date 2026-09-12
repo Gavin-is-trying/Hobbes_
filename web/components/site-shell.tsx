@@ -8,7 +8,6 @@ export function SiteShell({ sections, children }: { sections: Section[]; childre
     <div className="site-shell">
       <a className="skip-link" href="#main-content">Skip to content</a>
       <aside className="sidebar">
-        <Link href="/" className="brand" aria-label="Hobbes home"><span className="brand-mark" aria-hidden="true">h.</span>Hobbes</Link>
         <div className="sidebar-body">
           <nav aria-label="Main navigation" className="primary-nav">
             <Link href="/">Home</Link>

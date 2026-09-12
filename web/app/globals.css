@@ -147,40 +147,8 @@ h3 {
   overflow:auto;
 }
 
-.brand {
-  font-weight:600;
-  display:flex;
-  align-items:center;
-  gap:12px;
-  font-family:var(--font-display);
-  font-size:31px;
-  line-height:1;
-}
-
-.brand-mark {
-  border-radius:50%;
-  background:var(--accent);
-  color:var(--paper);
-  width:43px;
-  height:47px;
-  display:grid;
-  place-content:center;
-  font-size:39px;
-  padding-bottom:5px;
-  flex-shrink:0;
-}
-
-.brand-caption {
-  display:block;
-  font-family:Arial,sans-serif;
-  font-size:8px;
-  font-weight:700;
-  letter-spacing:1.7px;
-  margin-top:10px;
-}
-
 .sidebar-body {
-  padding-top:54px;
+  padding-top:0;
 }
 
 .nav-label {
@@ -1218,17 +1186,6 @@ input::placeholder {
   :root {
     --sidebar:195px;
   }
-  .brand {
-    font-size:27px;
-  }
-  .brand-caption {
-    font-size:7px;
-    letter-spacing:1px;
-  }
-  .brand-mark {
-    width:37px;
-    height:42px;
-  }
   .sidebar {
     padding-left:16px;
     padding-right:16px;
@@ -1305,21 +1262,8 @@ input::placeholder {
     border-bottom:1px solid var(--line);
     overflow:visible;
   }
-  .brand {
-    font-size:27px;
-  }
-  .brand-mark {
-    width:36px;
-    height:39px;
-    font-size:33px;
-  }
-  .brand-caption {
-    font-size:7px;
-    letter-spacing:1.5px;
-    margin-top:7px;
-  }
   .sidebar-body {
-    padding-top:16px;
+    padding-top:0;
   }
   .sidebar-body>.nav-label,.section-nav,.sidebar-note {
     display:none;
