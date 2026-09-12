@@ -34,5 +34,5 @@ jobs:
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         with:
-          model: qwen/qwen3-coder
+          model: openrouter/auto
           share: false
