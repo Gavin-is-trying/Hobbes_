@@ -29,10 +29,28 @@ jobs:
           fetch-depth: 1
           persist-credentials: false
 
+      - name: Check OpenRouter secret
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.HOBBES_API_KEY }}
+        run: |
+          python3 - <<'PY'
+          import os
+          import sys
+
+          key = os.environ.get("OPENROUTER_API_KEY", "")
+          if not key.strip():
+              print("::error::HOBBES_API_KEY is missing or empty. Add it under Settings > Secrets and variables > Actions > Repository secrets. Environment secrets are not available to this job because it declares no environment.")
+              sys.exit(1)
+          if key != key.strip():
+              print("::error::HOBBES_API_KEY contains surrounding whitespace. Save the raw key without spaces or newlines.")
+              sys.exit(1)
+          print("OpenRouter secret is present. This check does not validate the key or account balance.")
+          PY
+
       - name: Run OpenCode
         uses: anomalyco/opencode/github@latest
         env:
-          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.HOBBES_API_KEY }}
         with:
           model: openrouter/openrouter/auto
           share: false
