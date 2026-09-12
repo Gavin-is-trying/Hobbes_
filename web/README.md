@@ -36,7 +36,7 @@ The test runner starts and stops a local static server automatically and checks 
 2. In Vercel, choose **Add New → Project** and import `Gavin-is-trying/Hobbes_`.
 3. Choose **Next.js** and set **Root Directory** to `web`.
 4. Enable **Include source files outside of the Root Directory in the Build Step**. The original documents live one level above `web/`.
-5. Use Node.js **22.x**, install command `npm ci`, build command `npm run build`, and output directory `out` (the last two are configured in `vercel.json`).
+5. Use Node.js **22.x**, install command `npm ci`, and build command `npm run build` (configured in `vercel.json`). Leave **Output Directory** at the Next.js default; disable any dashboard override set to `out`. Vercel's Next.js integration reads build metadata from `.next` and handles `output: "export"` automatically. The local static export still lives in `out/`.
 6. Deploy. No environment variables are needed; do **not** copy `HOBBES_API_KEY` into this project.
 7. Under project Git settings, use `main` as the production branch. New pushes deploy automatically; pull requests receive previews. Ensure builds are not skipped for changes to the source documents outside `web/`.
 
