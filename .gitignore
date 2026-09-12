@@ -1,2 +1,10 @@
 .DS_Store
-.DS_Store
+.tools/
+web/node_modules/
+web/.next/
+web/out/
+web/.vercel/
+web/.env*
+web/*.tsbuildinfo
+web/test-results/
+web/playwright-report/
