@@ -59,6 +59,10 @@ Add or edit Markdown and redeploy to update the site. URLs derive from the full 
 
 GFM tables, lists, task lists, code blocks, and heading anchors are supported. YAML frontmatter and raw HTML are not rendered. Relative document links route to the corresponding website page; other repository references link to GitHub. Images are displayed as text references rather than loading remote tracking URLs. Supported Mermaid diagrams are rendered locally with a visible source fallback; unsupported syntax remains readable as source.
 
+## Brand styling
+
+`app/globals.css` uses lawn green `#0E5B2D` and forest green `#153619`, sampled from the JPEGs in `Brand Assets/` (JPEG compression introduces minor variations). White and pale-green supporting surfaces retain readable contrast. Display text uses an Optima/Candara/Trebuchet MS system-font stack to approximate the upright, flared wordmark; it is not an exact font identification and varies by platform. Body text stays in Arial/Helvetica for long-document readability. No remote fonts are loaded.
+
 ## Project structure
 
 - `app/`: home, library, document pages, and shared styles

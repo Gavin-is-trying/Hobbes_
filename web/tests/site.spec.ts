@@ -6,6 +6,10 @@ test("home has real sections and fits the viewport", async ({ page }, testInfo) 
   await page.goto("/");
   await expect(page.getByRole("heading", { level: 1 })).toContainText("shared understanding");
   await expect(page.locator(".space-card")).toHaveCount(4);
+  await expect(page.locator(".button-primary").first()).toHaveCSS("background-color", "rgb(14, 91, 45)");
+  await expect(page.locator(".guide-banner")).toHaveCSS("background-color", "rgb(21, 54, 25)");
+  await expect(page.locator(".hero em")).toHaveCSS("font-style", "normal");
+  await expect(page.locator(".hero h1")).toHaveCSS("font-family", /Optima/);
   await expect(page.getByText("No documents yet").first()).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
   await page.screenshot({ path: testInfo.outputPath("home.png"), fullPage: true });
