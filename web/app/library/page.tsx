@@ -7,5 +7,5 @@ export const metadata: Metadata = { title: "Document library", description: "Sea
 
 export default function LibraryPage() {
   const documents = getDocuments().map((doc) => ({ ...doc, href: docHref(doc) }));
-  return <div className="page"><div className="page-heading"><p className="eyebrow">KNOWLEDGE, WITHIN REACH</p><h1>Document library<span className="orange">.</span></h1><p>Find the context you need. Put it into practice.</p></div><Suspense fallback={<p role="status">Loading the document library…</p>}><DocumentLibrary documents={documents} sections={getSections().map((section) => section.name)} /></Suspense></div>;
+  return <div className="page"><div className="page-heading"><h1>Search</h1></div><Suspense fallback={<p role="status">Loading the document library…</p>}><DocumentLibrary documents={documents} sections={getSections().map((section) => section.name)} /></Suspense></div>;
 }
