@@ -8,7 +8,7 @@ const guide = documents.find((doc) => doc.path === "PROCESS-DOCUMENTATION-GUIDE.
 test("loads real Markdown from only the public allowlist", () => {
   assert.ok(documents.length > 0);
   assert.equal(guide.title, "Process Documentation Guide");
-  assert.ok(documents.every((doc) => /^(PROCESS-DOCUMENTATION-GUIDE\.md$|TLC-OS\/|Agents\/|External Customers\/|Internal Customers\/)/.test(doc.path)));
+  assert.ok(documents.every((doc) => /^(PROCESS-DOCUMENTATION-GUIDE\.md$|TLC-OS\/|External Customers\/|Internal Customers\/)/.test(doc.path)));
   assert.ok(documents.every((doc) => doc.body.length > 0 && !doc.path.includes(".gitkeep")));
   assert.equal(new Set(documents.map((doc) => doc.slug)).size, documents.length);
 });
@@ -25,7 +25,7 @@ test("empty lifecycle stages remain visible", () => {
 });
 
 test("relative document links retain fragments", () => {
-  const target = documents.find((doc) => doc.path === "Agents/Skills/elon-algorithm/templates/raw-process-intake.md")!;
+  const target = documents.find((doc) => doc.path === "External Customers/01 Leads/SOPs/Lead Intake SOP.md")!;
   assert.equal(resolveDocLink(guide, `${target.path}#example`), `${docHref(target)}#example`);
   assert.equal(resolveDocLink(target, "../../../../PROCESS-DOCUMENTATION-GUIDE.md"), docHref(guide));
   assert.equal(resolveDocLink(guide, "#folder-model"), "#folder-model");

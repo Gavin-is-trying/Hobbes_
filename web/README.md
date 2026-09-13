@@ -49,7 +49,6 @@ The build publishes all non-hidden `.md` files recursively inside:
 - `TLC-OS/`
 - `External Customers/`
 - `Internal Customers/`
-- `Agents/`
 
 It also publishes the root `PROCESS-DOCUMENTATION-GUIDE.md`. These sources are explicitly allowlisted in `lib/content.ts`; app files, dotfiles, symlinks, and `.gitkeep` placeholders are excluded. Existing documents are not copied or modified.
 

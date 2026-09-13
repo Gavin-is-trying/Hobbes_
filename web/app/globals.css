@@ -452,7 +452,6 @@ h3 {
   font-size:12px;
   font-weight:700;
   display:inline-flex;
-  gap:18px;
   align-items:center;
 }
 
@@ -467,7 +466,7 @@ h3 {
 
 .space-grid {
   display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
+  grid-template-columns:repeat(3,minmax(0,1fr));
   gap:16px;
 }
 
@@ -485,27 +484,6 @@ h3 {
   border-color:#0e5b2d;
   transform:translateY(-3px);
   box-shadow:0 7px 18px #15361908;
-}
-
-.card-top {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:23px;
-}
-
-.card-index {
-  font-family:monospace;
-  color:var(--accent);
-  font-size:12px;
-  background:var(--accent-light);
-  padding:6px 9px;
-  border-radius:3px;
-}
-
-.card-arrow {
-  font-size:23px;
-  color:var(--muted);
 }
 
 .space-card h3 {
@@ -743,17 +721,6 @@ input::placeholder {
   background:#f0f7f1;
 }
 
-.document-icon {
-  width:40px;
-  height:46px;
-  display:grid;
-  place-content:center;
-  background:#edf3ed;
-  color:var(--green);
-  font-size:24px;
-  flex-shrink:0;
-}
-
 .document-card-body {
   min-width:0;
 }
@@ -786,12 +753,7 @@ input::placeholder {
   overflow-wrap:anywhere;
 }
 
-.document-open {
-  font-size:22px;
-  margin-left:auto;
-  padding-left:5px;
-  color:var(--accent);
-}
+
 
 .empty-state {
   text-align:center;
@@ -1434,9 +1396,6 @@ input::placeholder {
 @media(max-width:440px) {
   .space-grid {
     grid-template-columns:1fr;
-  }
-  .space-card p {
-    max-width:none;
   }
   .stats-strip>div {
     align-items:flex-start;

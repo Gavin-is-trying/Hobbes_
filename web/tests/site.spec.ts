@@ -5,7 +5,7 @@ test("home has real sections and fits the viewport", async ({ page }, testInfo) 
   page.on("pageerror", (error) => errors.push(error.message));
   await page.goto("/");
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Documents");
-  await expect(page.locator(".space-card")).toHaveCount(4);
+  await expect(page.locator(".space-card")).toHaveCount(3);
   await expect(page.locator(".button-primary").first()).toHaveCSS("background-color", "rgb(14, 91, 45)");
   await expect(page.locator("h1")).toHaveCSS("font-family", /Optima/);
   await expect(page.getByRole("link", { name: "Process documentation guide", exact: true })).toBeVisible();

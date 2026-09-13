@@ -6,7 +6,6 @@ const spaces = [
   { name: "TLC-OS", description: "The principles, philosophy, and people behind the work." },
   { name: "External Customers", description: "The customer journey, from the first conversation to lasting value." },
   { name: "Internal Customers", description: "How we attract, support, and develop the people doing the work." },
-  { name: "Agents", description: "Reusable skills, frameworks, and templates for better processes." },
 ];
 
 export type Doc = {
