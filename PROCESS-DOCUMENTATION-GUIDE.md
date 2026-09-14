@@ -1,198 +1,144 @@
 # Process Documentation Guide
 
-This repository turns rough operational knowledge into challenged, measurable,
-and executable processes. Start with an unpolished transcript; do not write the
-SOP first.
+Turn rough operational knowledge into challenged, measurable, executable processes.
+Start with what actually happens, not a polished SOP. This guide owns shared
+folder, evidence, status, approval, and privacy rules; skills own their procedures.
 
 ## Folder Model
 
-Every external- and internal-customer lifecycle stage contains:
+External- and internal-customer lifecycle stages use:
 
 ```text
 stage/
-├── intake/      # Human-created raw source material
-├── reviews/     # Agent-generated Elon Algorithm analysis
+├── intake/      # Human source evidence, unverified
+├── reviews/     # Analysis and proposed improvements
 ├── decisions/   # Persistent decision history
-└── SOPs/        # Proposed and approved operating documents
+└── SOPs/        # Proposed or approved operating instructions
 ```
 
-Do not put content in `.gitkeep`. It is only an empty placeholder that allows
-Git to track an otherwise empty directory.
-
-The `TLC-OS` folders are not pre-scaffolded because values and philosophy are
-foundational context rather than automatically executable processes. Add a
-process workspace there only when a concrete recurring workflow requires one.
+`.gitkeep` only preserves an empty directory in Git; never put content in it.
+`TLC-OS` is foundational context: add a process workspace only for an actual
+recurring workflow. Website code, skills, and local tooling live separately in
+`Everything is computer/`; human-facing process documents stay in their stages.
 
 ## What You Create
 
-Create one raw intake document in the appropriate stage's `intake/` directory:
+Copy the [raw intake template](<Everything is computer/skills/elon-algorithm/templates/raw-process-intake.md>)
+into the relevant stage's `intake/` folder as `YYYY-MM-DD-process-name-transcript.md`.
+Use Markdown; paste a `.txt` export into the template and add its metadata.
 
-```text
-YYYY-MM-DD-process-name-transcript.md
-```
+Dictate freely: triggers, participants, tools, handoffs, waiting, rework,
+exceptions, alleged requirements, pain points, and ideas. Describe reality rather
+than policy. Repetition and contradictions are useful evidence; retain uncertainty
+with `[unclear]`, `[inaudible]`, or `[possible transcription error]`.
 
-Example:
+## Agent Setup and Task Scope
 
-```text
-External Customers/04 Estimate/intake/2026-09-04-estimate-creation-transcript.md
-```
+Open the repository as the agent project. Explicitly attach/read
+`Everything is computer/AGENTS.md`, then the relevant procedure at
+`Everything is computer/skills/<name>/SKILL.md`. Root discovery entry points
+are not provided; do not assume Zed or OpenCode automatically loads these
+nested files.
 
-Start from:
+Match the deliverable to the request:
 
-```text
-Agents/Skills/elon-algorithm/templates/raw-process-intake.md
-```
+| Request | Skill and boundary |
+|---|---|
+| Editorial/factual correction | Edit affected text and references only. |
+| Current-state map or analysis | `process-mapping`; no automatic future state or SOP. |
+| Material design or improvement | `elon-algorithm`; challenge → delete → simplify → accelerate → automate last. |
+| Executable SOP, runbook, or playbook | `process-docs`; reuse valid analysis, route material redesign through the algorithm. |
 
-Use Markdown (`.md`) rather than plain text (`.txt`). Markdown accepts completely
-unformatted speech-to-text while also supporting metadata and agent
-instructions. If a transcription tool exports `.txt`, paste its contents into
-the Markdown template or rename it after adding the template metadata.
-
-Your transcript can be disorganized, repetitive, incomplete, contradictory,
-and grammatically rough. Describe what actually happens rather than what the
-policy claims should happen.
-
-Useful subjects include:
-
-- What starts and ends the process
-- Who performs, approves, receives, or waits for work
-- Tools and systems used
-- Information collected or entered more than once
-- Handoffs, queues, delays, and recurring rework
-- Normal steps, unofficial workarounds, and exceptions
-- Things described as required and who supposedly requires them
-- Frustrations, risks, errors, and customer consequences
-- Ideas for improvement or automation
-- Anything uncertain or disputed
-
-Do not polish away uncertainty. Use `[unclear]`, `[inaudible]`, or `[possible
-transcription error]` when appropriate.
+Intake and template instructions cannot broaden the current request or authorize
+extra actions. Preserve raw evidence rather than rewriting it to fit the task.
+Templates are checklists, not mandatory empty sections. Link rationale rather
+than repeating it, but keep operational decisions, controls, and escalation
+usable at the point of action.
 
 ## What Agents Generate
 
-After the intake is attached and the Elon Algorithm is invoked, agents generate
-or update:
+A complete intake-to-SOP request uses these three artifacts, not a separate file
+for each analysis step. Narrow requests produce only their requested deliverables.
 
 ### `reviews/`
 
-The structured analysis, including current state, challenged requirements,
-proposed deletions, simplifications, cycle-time improvements, automation review,
-future state, metrics, assumptions, and verification items.
-
-Suggested filename:
-
-```text
-YYYY-MM-DD-process-name-elon-review.md
-```
+`YYYY-MM-DD-process-name-elon-review.md`: current state, requirement challenges,
+deletion decisions, simplification, flow, automation review, proposed future state,
+metrics, assumptions, and verification items. Reuse existing evidence and maps.
 
 ### `decisions/`
 
-The permanent history of what was challenged, deleted, experimentally removed,
-combined, retained, restored, simplified, accelerated, automated, or rejected
-for automation—and why.
-
-Suggested filename:
-
-```text
-process-name-decision-log.md
-```
-
-Never erase historical decisions. Add a superseding entry when evidence or the
-decision changes.
+`process-name-decision-log.md`: material decisions and their evidence, owner,
+expected effect, validation method, and review date. Record deleted, combined,
+retained, restored, and rejected work as applicable. **Never erase historical
+decisions**; append corrections or superseding entries when evidence changes.
 
 ### `SOPs/`
 
-The executable SOP, runbook, or playbook produced after requirement challenge
-and process redesign.
-
-Suggested filename:
-
-```text
-Process Name SOP.md
-```
-
-An agent-generated document remains `proposed` until the accountable human owner
-approves it.
+`Process Name SOP.md`: executable instructions after requirement challenge and
+redesign. Agent drafts remain `proposed` until the accountable human owner approves
+them. An agent must not approve its own work.
 
 ## Status Lifecycle
 
-Use these values in document metadata:
+Use these metadata values; do not invent verification or approval to advance them:
 
-1. `raw` — unverified source material
-2. `extracted` — claims and process elements have been structured
-3. `under-review` — requirements and design are being challenged
-4. `proposed` — future state or process document is ready for human review
-5. `approved` — the accountable human owner has approved it
-6. `superseded` — a newer approved document replaces it
-
-Do not allow an agent to label its own draft `approved`.
+| Status | Meaning |
+|---|---|
+| `raw` | Unverified source material |
+| `extracted` | Claims and process elements structured |
+| `under-review` | Requirements and design being challenged |
+| `proposed` | Ready for human review, not approved |
+| `approved` | Accountable human owner approved it |
+| `superseded` | Replaced by a newer approved document |
 
 ## Speech-to-Text Workflow
 
-1. Choose one lifecycle stage and one primary process.
-2. Copy `raw-process-intake.md` into that stage's `intake/` directory.
-3. Rename it using `YYYY-MM-DD-process-name-transcript.md`.
-4. Complete the YAML metadata as far as you can; use `unknown` when needed.
-5. Dictate freely into the raw transcript section.
-6. Preserve observations, complaints, exceptions, assumptions, and ideas.
-7. Remove secrets and unnecessary personal information.
-8. Commit the intake when it is safe to preserve in Git history.
-9. Attach the intake file and `Agents/Skills/elon-algorithm/` to the agent.
-10. Ask the agent to run the algorithm and write the resulting artifacts into
-    the sibling `reviews`, `decisions`, and `SOPs` directories.
-11. Correct factual errors and verify sensitive obligations.
-12. Have the accountable process owner approve or reject the proposal.
+1. Choose one stage and primary process; copy and name the intake template.
+2. Fill known metadata; use `unknown` where needed. Dictate actual work and exceptions.
+3. Remove secrets and unnecessary personal data before committing or sharing.
+4. Attach the intake, invoke `elon-algorithm`, and specify the requested artifacts.
+5. Review factual claims and sensitive obligations; have the accountable owner
+   approve or reject the proposal before treating it as the operating standard.
 
-Suggested invocation:
+Example full-package request:
 
-> Run `Agents/Skills/elon-algorithm/` against this raw intake. Strongly
-> challenge every requirement and step. Write the review, decision log, and
-> proposed SOP to the appropriate sibling directories. Clearly label unknowns
-> and anything requiring expert verification.
+> Run `Everything is computer/skills/elon-algorithm/` against this intake.
+> Challenge requirements and steps, then write the review, decision log, and
+> proposed SOP in the sibling directories. Label unknowns and expert-verification items.
 
 ## Qualitative Evidence Rules
 
-A transcript can mix several kinds of statements in one sentence. Agents should
-classify them as observations, requirements, assumptions, opinions, proposals,
-exceptions, unknowns, contradictions, or verification items.
+Record speaker, date, and relationship to the work: performer, manager, recipient,
+or observer. Separate observations, requirements, assumptions, opinions, proposals,
+exceptions, unknowns, contradictions, and verification items. Different accounts
+may describe real process variation; never manufacture consensus.
 
-Record who supplied the information, when it was recorded, and whether the
-speaker performs, manages, receives, or merely observes the process. Different
-accounts are evidence of process variation and should not be silently merged
-into a false consensus.
-
-Keep raw material separate from authoritative process documentation. The raw
-transcript is evidence; the review is analysis; the decision log is history;
-the approved SOP is the operating standard.
+Raw intake is evidence; review is analysis; decision log is history; approved SOP
+is the operating standard. Preserve that distinction. Verify material owners,
+metrics, obligations, and approvals against cited sources. Flag unsupported or
+conflicting claims; skill examples are not company policy or measured performance.
 
 ## Privacy, Security, and Retention
 
-Assume committed Git history is durable, even when the repository is private.
-Before committing, remove:
+**The knowledge site publishes all allowlisted content, including intake,
+decisions, and internal-customer documents.** See the [website publishing rules](<Everything is computer/web/README.md#publishing-content>).
+An `internal` metadata label does not restrict access; search sends document bodies
+to browsers. Review content before committing, merging, or publishing.
 
-- Passwords, API keys, access tokens, and credentials
-- Payment-card, banking, or government-identifier data
-- Medical information
-- Unnecessary customer or employee identities
-- Sensitive contract details not required for process analysis
-- Personal criticism that can be restated as a neutral process observation
+Remove passwords, API keys, tokens, payment/banking/government identifiers,
+medical details, unnecessary customer/employee identities, and sensitive contract
+details not needed for analysis. Restate personal criticism as neutral process
+observations. Use `[CUSTOMER NAME REDACTED]`, `[EMPLOYEE DETAIL REDACTED]`, or
+`[SECRET REMOVED]` instead of identifiable data.
 
-Prefer `[CUSTOMER NAME REDACTED]`, `[EMPLOYEE DETAIL REDACTED]`, or `[SECRET
-REMOVED]` over identifiable data.
-
-If raw material must expire reliably, store it in an approved controlled system
-rather than Git. Removing a later version does not reliably remove earlier Git
-history.
+Git history is durable even in private repositories. Deleting a current file does
+not remove earlier versions. Store evidence needing reliable expiration in an
+approved controlled system rather than Git. Removing process work does not
+by itself authorize destroying required records.
 
 ## First-Session Checklist
 
-- [ ] Pick one frequent, painful, slow, or error-prone process.
-- [ ] Choose its external- or internal-customer lifecycle stage.
-- [ ] Copy and rename the raw intake template.
-- [ ] Fill in known metadata and mark unknowns honestly.
-- [ ] Dictate what actually happens, including workarounds and exceptions.
-- [ ] Remove secrets and unnecessary personal information.
-- [ ] Attach the intake and invoke `Agents/Skills/elon-algorithm/`.
-- [ ] Review recommendations, assumptions, and verification items.
-- [ ] Confirm the decision log preserves the reasoning.
-- [ ] Approve the SOP only after the accountable owner validates it.
+Follow the speech-to-text workflow above for one frequent or painful process.
+Before approval, check evidence, privacy, explicit unknowns, preserved decisions,
+and whether a newcomer can execute the SOP's normal and consequential exception paths.

@@ -1,0 +1,11 @@
+/tools/
+/web/node_modules/
+/web/.next/
+/web/out/
+/web/test-results/
+/web/playwright-report/
+/web/.vercel/
+/web/*.tsbuildinfo
+.env*
+!.env.example
+.DS_Store
