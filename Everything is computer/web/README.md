@@ -69,4 +69,4 @@ GFM tables, lists, task lists, code blocks, and heading anchors are supported. Y
 - `lib/content.ts`: allowlisted build-time document discovery and links
 - `lib/content.test.ts`: document discovery and routing regression tests
 
-The owner-only OpenCode workflow has moved to `Everything is computer/workflows/opencode.yml` and is inactive there: GitHub only runs workflows in `.github/workflows/`. It is independent of this website.
+The owner-only OpenCode workflow's canonical definition is at `Everything is computer/workflows/opencode.yml` and is mirrored to `.github/workflows/opencode.yml`, where GitHub Actions runs it. It is independent of this website.

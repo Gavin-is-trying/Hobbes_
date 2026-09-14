@@ -8,15 +8,14 @@ SOPs stay in the root customer/TLC-OS folders. This folder was initially named
 - `skills/`: canonical process and complexity-review skills; edit these, not copies.
 - [web/README.md](web/README.md): website development, tests, publication, and deployment.
 - `tools/`: ignored local Node/browser/cache downloads, not required repository dependencies.
-- [workflows/opencode.yml](workflows/opencode.yml): stored OpenCode workflow definition; inactive in this location.
+- [workflows/opencode.yml](workflows/opencode.yml): canonical OpenCode workflow definition, mirrored to the active root GitHub Actions location.
 - [Process Documentation Guide](../TLC-OS/PROCESS-DOCUMENTATION-GUIDE.md): shared process-document rules under `TLC-OS/`.
 
 Explicitly load `Everything is computer/AGENTS.md` and the relevant canonical
 skill when starting an agent task; root discovery pointers are not provided.
-GitHub only discovers active workflows in root `.github/workflows/`. The definition
-now lives in `Everything is computer/workflows/opencode.yml`, so GitHub will not
-run it from this location. Restore it to `.github/workflows/` only if re-enabling
-that automation is intended.
+GitHub discovers active workflows only in root `.github/workflows/`. The canonical
+definition in `Everything is computer/workflows/opencode.yml` is mirrored to
+`.github/workflows/opencode.yml`, where GitHub Actions runs it.
 This folder is excluded from website document discovery, not a secret store.
 
 ## Maintenance path
@@ -71,11 +70,12 @@ workflow remains unchanged.
 ### Path relocation follow-up — 2026-09-14
 
 The owner moved the process guide to `TLC-OS/PROCESS-DOCUMENTATION-GUIDE.md`
-and the workflow to `Everything is computer/workflows/opencode.yml`. This
-supersedes the earlier workflow-location statements; the definition is retained
-but is no longer active through GitHub Actions. Guide links use the new source
-path, while the website retains `/docs/process-documentation-guide` for existing
-links. Empty lifecycle workspaces are now created on demand, not pre-scaffolded.
+and retained the canonical workflow definition at
+`Everything is computer/workflows/opencode.yml`. It is mirrored to
+`.github/workflows/opencode.yml` so GitHub Actions can run it. Guide links use
+the new source path, while the website retains `/docs/process-documentation-guide`
+for existing links. Empty lifecycle workspaces are now created on demand, not
+pre-scaffolded.
 
 ## Deployment and remaining checks
 
