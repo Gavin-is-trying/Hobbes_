@@ -3,9 +3,9 @@ import path from "node:path";
 // Next commands run from web/; content is read only while generating the static site.
 const root = path.resolve(process.cwd(), "..");
 const spaces = [
-  { name: "TLC-OS", description: "The principles, philosophy, and people behind the work." },
-  { name: "External Customers", description: "The customer journey, from the first conversation to lasting value." },
   { name: "Internal Customers", description: "How we attract, support, and develop the people doing the work." },
+  { name: "External Customers", description: "The customer journey, from the first conversation to lasting value." },
+  { name: "TLC-OS", description: "The principles, philosophy, and people behind the work." },
 ];
 
 export type Doc = {
