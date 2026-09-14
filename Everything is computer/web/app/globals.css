@@ -24,7 +24,7 @@ html {
 
 body {
   margin:0;
-  background:var(--paper);
+  background:#000;
   color:var(--ink);
   font-family:Arial,Helvetica,sans-serif;
   font-size:15px;
