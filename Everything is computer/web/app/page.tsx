@@ -3,7 +3,7 @@ import { docHref, getDocuments, getSections } from "../lib/content";
 
 export default function HomePage() {
   const documents = getDocuments();
-  const guide = documents.find((doc) => doc.path === "PROCESS-DOCUMENTATION-GUIDE.md");
+  const guide = documents.find((doc) => doc.path === "TLC-OS/PROCESS-DOCUMENTATION-GUIDE.md");
 
   return (
     <div className="page home-page">

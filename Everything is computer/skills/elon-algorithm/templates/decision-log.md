@@ -1,6 +1,6 @@
 # [Process Name] — Decision Log
 
-Use for material decisions, not editorial corrections. Follow the root [guide](../../../../PROCESS-DOCUMENTATION-GUIDE.md) for status, approval, and permanent history: append a superseding entry rather than erase an earlier decision. Link evidence and review rationale instead of repeating them; mark unknown owners/dates explicitly.
+Use for material decisions, not editorial corrections. Follow the [guide](../../../../TLC-OS/PROCESS-DOCUMENTATION-GUIDE.md) for status, approval, and permanent history: append a superseding entry rather than erase an earlier decision. Link evidence and review rationale instead of repeating them; mark unknown owners/dates explicitly.
 
 | ID | Date | Process element / requirement | Prior state and rationale | Evidence / review link | Decision | Proposal / human approval evidence | Accountable owner | Expected effect / risk | Validation / rollback or add-back trigger | Review date | Supersedes |
 |---|---|---|---|---|---|---|---|---|---|---|---|

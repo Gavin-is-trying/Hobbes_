@@ -1,6 +1,6 @@
 # [Process Name] — Elon Algorithm Review
 
-Use with [elon-algorithm](../SKILL.md), not as independent instructions. Apply the root [guide](../../../../PROCESS-DOCUMENTATION-GUIDE.md) for metadata, status, folders, and approval. Include only requested, useful sections; link existing evidence/maps/decisions. Unknowns stay explicit. This worksheet records analysis; it does not authorize implementation.
+Use with [elon-algorithm](../SKILL.md), not as independent instructions. Apply the [guide](../../../../TLC-OS/PROCESS-DOCUMENTATION-GUIDE.md) for metadata, status, folders, and approval. Include only requested, useful sections; link existing evidence/maps/decisions. Unknowns stay explicit. This worksheet records analysis; it does not authorize implementation.
 
 - **Process owner / customer:** [Sourced person or accountable role / recipient, or unknown]
 - **Review date / status:** [Date / guide status]

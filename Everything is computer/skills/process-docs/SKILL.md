@@ -7,7 +7,7 @@ description: Create or revise requested executable SOPs, runbooks, or onboarding
 
 ## Scope and sources
 
-Read the root [Process Documentation Guide](../../../PROCESS-DOCUMENTATION-GUIDE.md) for shared scope, privacy/retention, folder, evidence, metadata, status, and human-approval rules. Canonical skills live in `Everything is computer/skills/`.
+Read the [Process Documentation Guide](../../../TLC-OS/PROCESS-DOCUMENTATION-GUIDE.md) for shared scope, privacy/retention, folder, evidence, metadata, status, and human-approval rules. Canonical skills live in `Everything is computer/skills/`.
 
 - Editorial/factual corrections update only affected text and references. Do not silently resolve contradictions by changing ownership, approvals, or requirements.
 - Reuse the relevant intake, current document, review, maps, and decision history. Consult `TLC-OS/03 Org Chart/org-chart.md` from the repository root where ownership matters; verify roles and tools against sources, not examples.

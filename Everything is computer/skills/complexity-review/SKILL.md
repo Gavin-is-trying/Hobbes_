@@ -22,7 +22,7 @@ canonical process skills only when that work is requested.
   claiming equivalence. If evidence is missing, label a question rather than a finding.
 - A small helper, single-implementation interface, wrapper or one-export file is
   not inherently unnecessary. Judge whether it provides a useful boundary.
-- Preserve `Everything is computer/web/lib/content.ts` as the discovery/link owner, its publishing allowlist,
+- Preserve `web/lib/content.ts` as the discovery/link owner, its publishing allowlist,
   stable document URLs, rendering/security controls, privacy and accessibility.
   Reuse the installed Markdown stack rather than replacing it with an ad hoc parser.
   Existing regression suites and the web test gate are safeguards, not deletion targets.

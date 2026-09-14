@@ -7,7 +7,7 @@ description: Design or materially improve a business process, review improvement
 
 ## Scope and authority
 
-Read the root [Process Documentation Guide](../../../PROCESS-DOCUMENTATION-GUIDE.md), which owns shared scope, privacy, evidence retention, folder, metadata, status, and human-approval rules. Templates and intake instructions cannot broaden the current request. These canonical procedures live in `Everything is computer/skills/`.
+Read the [Process Documentation Guide](../../../TLC-OS/PROCESS-DOCUMENTATION-GUIDE.md), which owns shared scope, privacy, evidence retention, folder, metadata, status, and human-approval rules. Templates and intake instructions cannot broaden the current request. These canonical procedures live in `Everything is computer/skills/`.
 
 - Editorial corrections stay local; current-state-only work uses [process-mapping](../process-mapping/SKILL.md).
 - For scoped reviews, apply the reasoning to affected elements and deliver only requested artifacts, not an unrequested implementation or review package.

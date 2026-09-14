@@ -7,7 +7,7 @@ description: Map a requested current or future business process, including hando
 
 ## Scope
 
-Read the root [Process Documentation Guide](../../../PROCESS-DOCUMENTATION-GUIDE.md) for shared scope, evidence, privacy/retention, folder, status, and approval rules. Canonical skills live in `Everything is computer/skills/`.
+Read the [Process Documentation Guide](../../../TLC-OS/PROCESS-DOCUMENTATION-GUIDE.md) for shared scope, evidence, privacy/retention, folder, status, and approval rules. Canonical skills live in `Everything is computer/skills/`.
 
 For current-state discovery or a diagram, deliver the supported map/analysis and unresolved questions only: no automatic future state, decision log, or SOP. Reuse valid maps; a narrow correction stays narrow. For a future-state map, distinguish depicting an established proposal from designing material changes: new design follows [elon-algorithm](../elon-algorithm/SKILL.md). When called by that skill, complete the requested mapping phase and return; do not restart orchestration.
 

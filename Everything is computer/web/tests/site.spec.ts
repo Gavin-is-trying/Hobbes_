@@ -27,12 +27,12 @@ test("search, section changes, empty states, and browser history work", async ({
   await page.getByRole("button", { name: "Clear filters" }).click();
   await expect(page.locator(".document-card")).toHaveCount(count);
   await page.getByLabel("Section", { exact: true }).selectOption("TLC-OS");
-  await expect(page.locator(".document-card")).toHaveCount(1);
+  await expect(page.locator(".document-card")).toHaveCount(2);
   await page.getByLabel("Section", { exact: true }).selectOption("External Customers");
   await expect(page.locator(".document-card").first()).toContainText("External Customers");
   await page.goBack();
   await expect(page.getByLabel("Section", { exact: true })).toHaveValue("TLC-OS");
-  await expect(page.locator(".document-card")).toHaveCount(1);
+  await expect(page.locator(".document-card")).toHaveCount(2);
   await page.getByLabel("Section", { exact: true }).selectOption("Internal Customers");
   await expect(page.getByRole("heading", { name: "No documents found." })).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);

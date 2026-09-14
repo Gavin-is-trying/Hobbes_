@@ -50,11 +50,11 @@ The build publishes all non-hidden `.md` files recursively inside:
 - `External Customers/`
 - `Internal Customers/`
 
-It also publishes the root `PROCESS-DOCUMENTATION-GUIDE.md`. These sources are explicitly allowlisted in `lib/content.ts`; the entire `Everything is computer/` tree (including skills), dotfiles, symlinks, and `.gitkeep` placeholders are excluded. Existing documents are not copied or modified.
+The guide lives at `TLC-OS/PROCESS-DOCUMENTATION-GUIDE.md` and is published through the `TLC-OS/` scan. These sources are explicitly allowlisted in `lib/content.ts`; the entire `Everything is computer/` tree (including skills), dotfiles, symlinks, and `.gitkeep` placeholders are excluded. Existing documents are not copied or modified.
 
 **Everything in this allowlist is public**, including intake transcripts, decisions, templates, and documents in `Internal Customers`. Search also sends these documents to the browser. Review content before merging; neither an obscure URL nor a hidden navigation link makes it private.
 
-Add or edit Markdown and redeploy to update the site. URLs derive from the full source path, so moving or renaming a document changes its URL. Duplicate normalized URLs fail the build rather than silently overwriting pages. Empty sections remain selectable and show "No documents found." in search; lifecycle stage directories are discovered but not rendered as separate navigation.
+Add or edit Markdown and redeploy to update the site. URLs derive from the full source path, so moving or renaming a document changes its URL. The explicit legacy exception in `lib/content.ts` is `TLC-OS/PROCESS-DOCUMENTATION-GUIDE.md`, which preserves `/docs/process-documentation-guide`. Duplicate normalized URLs fail the build rather than silently overwriting pages. Empty sections remain selectable and show "No documents found." in search; lifecycle stage directories are discovered but not rendered as separate navigation.
 
 GFM tables, lists, task lists, code blocks, and heading anchors are supported. YAML frontmatter and raw HTML are not rendered. Relative document links route to the corresponding website page; other repository references link to GitHub. Images are displayed as text references rather than loading remote tracking URLs. Supported Mermaid diagrams are rendered locally with a visible source fallback; unsupported syntax remains readable as source.
 
@@ -69,4 +69,4 @@ GFM tables, lists, task lists, code blocks, and heading anchors are supported. Y
 - `lib/content.ts`: allowlisted build-time document discovery and links
 - `lib/content.test.ts`: document discovery and routing regression tests
 
-The existing owner-only OpenCode GitHub workflow is independent of this website and is left unchanged.
+The owner-only OpenCode workflow has moved to `Everything is computer/workflows/opencode.yml` and is inactive there: GitHub only runs workflows in `.github/workflows/`. It is independent of this website.

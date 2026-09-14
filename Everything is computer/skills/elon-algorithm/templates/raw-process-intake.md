@@ -13,7 +13,7 @@ sensitivity: internal
 
 # [Process Name] — Raw Process Intake
 
-Unverified qualitative source material, not approved requirements. Before recording or sharing, apply the repository-root `PROCESS-DOCUMENTATION-GUIDE.md` privacy, security, retention, folder, and status rules; a metadata label is not access control. This reminder uses a repository-root path so it remains valid when the template is copied to a lifecycle stage.
+Unverified qualitative source material, not approved requirements. Before recording or sharing, apply the repository-relative `TLC-OS/PROCESS-DOCUMENTATION-GUIDE.md` privacy, security, retention, folder, and status rules; a metadata label is not access control. This reminder uses a repository-relative path so it remains valid when the template is copied to a lifecycle stage.
 
 ## Context known to the speaker
 

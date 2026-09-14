@@ -15,7 +15,7 @@ suggestions only; process redesign still uses the skills below.
 
 ## Business-process work
 
-Read the root [Process Documentation Guide](../PROCESS-DOCUMENTATION-GUIDE.md) for locations, evidence, status, approval, and retention rules. Load only the relevant skill:
+Read the [Process Documentation Guide](../TLC-OS/PROCESS-DOCUMENTATION-GUIDE.md) for locations, evidence, status, approval, and retention rules. Load only the relevant skill:
 
 - `elon-algorithm`: material process design or improvement; challenge → delete → simplify → accelerate → automate last.
 - `process-mapping`: the requested current-state or future-state map, not an automatic full redesign.

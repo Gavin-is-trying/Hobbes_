@@ -18,6 +18,8 @@ export type Doc = {
 };
 
 export function slugForPath(source: string): string {
+  // Preserve the guide's public URL after its move into TLC-OS.
+  if (source === "TLC-OS/PROCESS-DOCUMENTATION-GUIDE.md") return "process-documentation-guide";
   return source.replace(/\.md$/i, "").split("/").map((segment) =>
     segment.normalize("NFKD").toLowerCase().replace(/[\u0300-\u036f]/g, "")
       .replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "document"
@@ -38,7 +40,7 @@ function walk(directory: string): string[] {
 
 export function getDocuments(): Doc[] {
   // Only these explicit sources are public. Never crawl the app, secrets, or .git.
-  const sources = ["PROCESS-DOCUMENTATION-GUIDE.md", ...spaces.flatMap((s) => walk(s.name))];
+  const sources = spaces.flatMap((s) => walk(s.name));
   const slugs = new Set<string>();
   return sources.map((source) => {
     const body = fs.readFileSync(path.join(root, source), "utf8");
