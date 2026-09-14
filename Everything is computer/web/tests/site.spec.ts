@@ -38,6 +38,19 @@ test("search, section changes, empty states, and browser history work", async ({
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
 });
 
+test("process intake switches journeys and structures pasted notes", async ({ page }) => {
+  await page.goto("/intake/");
+  await expect(page.getByRole("heading", { name: "Turn notes into a process" })).toBeVisible();
+  await page.getByRole("tab", { name: "Internal Customers" }).click();
+  await expect(page.getByRole("button", { name: /01 Attraction/ })).toHaveClass(/selected/);
+  await page.getByRole("button", { name: /04 Onboarding/ }).click();
+  await expect(page.locator(".selected-step strong")).toHaveText("Onboarding");
+  await page.getByLabel("Paste notes, a transcript, or an existing procedure").fill("Manager sends the welcome plan. Teammate completes access setup.");
+  await page.getByRole("button", { name: "Build process draft" }).click();
+  await expect(page.getByRole("heading", { name: "Onboarding process draft" })).toBeVisible();
+  await expect(page.getByText("Who owns this step from start to finish?")).toBeVisible();
+});
+
 test("document headings and local Mermaid previews render", async ({ page }) => {
   const errors: string[] = [];
   page.on("pageerror", (error) => errors.push(error.message));

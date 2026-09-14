@@ -9,10 +9,11 @@ export function SiteShell({ sections, children }: { sections: Section[]; childre
       <a className="skip-link" href="#main-content">Skip to content</a>
       <aside className="sidebar">
         <div className="sidebar-body">
-          <nav aria-label="Main navigation" className="primary-nav">
-            <Link href="/">Home</Link>
-            <Link href="/library">Search</Link>
-          </nav>
+            <nav aria-label="Main navigation" className="primary-nav">
+             <Link href="/">Home</Link>
+             <Link href="/library">Search</Link>
+             <Link className="nav-highlight" href="/intake">Build a process</Link>
+            </nav>
           <div className="section-nav">
             <nav aria-label="Sections">{sections.map((section) => <Link href={`/library?section=${encodeURIComponent(section.name)}`} key={section.name}>{section.name}</Link>)}</nav>
           </div>
