@@ -9,7 +9,7 @@ export default function HomePage() {
     <div className="page home-page">
       <header className="page-heading">
         <h1>Documents</h1>
-        <Link className="button button-primary" href="/library">Search documents</Link>
+          <div className="heading-actions"><Link className="button button-secondary" href="/intake">Build a process</Link><Link className="button button-primary" href="/library">Search documents</Link></div>
       </header>
       <section className="space-grid" aria-label="Sections">
         {getSections().map((section) => {
