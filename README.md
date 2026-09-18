@@ -1,6 +1,6 @@
 # Hobbes
 
-Hobbes is an operational knowledge system for documenting, reviewing, and publishing how the organization works. It combines process evidence and operating documents with a static documentation website.
+Hobbes is an operational knowledge system for documenting, reviewing, and publishing how the organization works. It combines process evidence and operating documents with a documentation website and a small database for client records.
 
 ## What is in this repository?
 
@@ -24,7 +24,7 @@ Raw evidence, analysis, decisions, and approved operating instructions are kept 
 
 ## Documentation website
 
-The website is a static Next.js application in [`everything-is-computer/web`](everything-is-computer/web/). It reads Markdown at build time and publishes only documents under these explicit source directories:
+The website is a Next.js application in [`everything-is-computer/web`](everything-is-computer/web/). Document pages are generated at build time and publish only documents under these explicit source directories:
 
 - `TLC-OS/`
 - `External Customers/`
@@ -39,7 +39,10 @@ The application provides:
 - stable document routes derived from repository paths;
 - heading anchors and relative document links;
 - local Mermaid diagram rendering with a readable source fallback;
-- responsive desktop and mobile layouts.
+- responsive desktop and mobile layouts;
+- a `/clients` intake form backed by a hosted Postgres database.
+
+Customer records entered on the Clients page live only in that database. The connection string is supplied through the `DATABASE_URL` environment variable and is never committed. The published `TLC-OS/Clients/` documents define the record format and sort rule only; they contain no real customer data.
 
 See [`everything-is-computer/web/README.md`](everything-is-computer/web/README.md) for the complete website and deployment guide.
 
@@ -50,10 +53,11 @@ The web application requires Node.js 22.x. From the web directory:
 ```sh
 cd "everything-is-computer/web"
 npm ci
+cp .env.example .env.local   # set DATABASE_URL to a Postgres connection string
 npm run dev
 ```
 
-Open `http://localhost:3000` to use the development site.
+Open `http://localhost:3000` to use the development site. The document pages render without the database; the Clients form needs `DATABASE_URL`.
 
 Run the validation suite with:
 
@@ -63,17 +67,17 @@ npm run build
 npm run typecheck
 ```
 
-Browser tests additionally require Python 3 and Playwright Chromium:
+Browser tests additionally require Playwright Chromium:
 
 ```sh
 npx playwright install chromium
 npm run test:e2e
 ```
 
-The production build creates a static export in `everything-is-computer/web/out/`. Preview it with:
+The production build creates a Next.js server build in `everything-is-computer/web/.next/`. Start it with:
 
 ```sh
-python3 -m http.server 3000 --directory out
+npm run start
 ```
 
 ## Adding process documentation
@@ -89,7 +93,7 @@ For process design, the repository's standard sequence is to challenge requireme
 
 ## Deployment
 
-The site is configured for Vercel. Set the project root directory to `everything-is-computer/web`, enable inclusion of source files outside that root, use Node.js 22.x, install with `npm ci`, and build with `npm run build`. No application environment variables are required.
+The site is configured for Vercel. Set the project root directory to `everything-is-computer/web`, enable inclusion of source files outside that root, use Node.js 22.x, install with `npm ci`, and build with `npm run build`. Set `DATABASE_URL` to a hosted Postgres connection string for the Clients database; no other application environment variables are required. Never commit the connection string or real customer data.
 
 The canonical OpenCode workflow is [`everything-is-computer/workflows/opencode.yml`](everything-is-computer/workflows/opencode.yml); the GitHub Actions copy is [`.github/workflows/opencode.yml`](.github/workflows/opencode.yml). It is separate from the website build and is restricted to owner-triggered comments.
 

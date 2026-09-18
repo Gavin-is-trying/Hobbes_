@@ -27,7 +27,7 @@ export function slugForPath(source: string): string {
 }
 
 function walk(directory: string): string[] {
-  return fs.readdirSync(path.join(root, directory), { withFileTypes: true })
+  return fs.readdirSync(path.join(/* turbopackIgnore: true */ root, directory), { withFileTypes: true })
     .sort((a, b) => a.name.localeCompare(b.name, "en"))
     .flatMap((entry) => {
       if (entry.name.startsWith(".")) return [];
@@ -43,7 +43,7 @@ export function getDocuments(): Doc[] {
   const sources = spaces.flatMap((s) => walk(s.name));
   const slugs = new Set<string>();
   return sources.map((source) => {
-    const body = fs.readFileSync(path.join(root, source), "utf8");
+    const body = fs.readFileSync(path.join(/* turbopackIgnore: true */ root, source), "utf8");
     const text = body.replace(/^---\r?\n[\s\S]*?\r?\n---(?:\r?\n|$)/, "");
     const heading = /^#{1,2}\s+(.+?)\s*#*\s*$/m.exec(text)?.[1];
     const title = heading || path.basename(source, ".md").replace(/[-_]/g, " ");
@@ -61,7 +61,7 @@ export function getDocuments(): Doc[] {
 export function getSections() {
   return spaces.map((space) => ({
     ...space,
-    stages: fs.readdirSync(path.join(root, space.name), { withFileTypes: true })
+    stages: fs.readdirSync(path.join(/* turbopackIgnore: true */ root, space.name), { withFileTypes: true })
       .filter((entry) => entry.isDirectory() && !entry.name.startsWith("."))
       .map((entry) => entry.name).sort((a, b) => a.localeCompare(b, "en")),
   }));

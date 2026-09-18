@@ -13,7 +13,8 @@ sensitivity: restricted
 
 > One short form per customer. Keep the fields fixed and in this order so every
 > entry looks the same. Do not commit real personal data to this public repository;
-> store the completed entry in the approved system of record.
+> save the completed entry through the Clients page, which stores it in the client
+> database.
 
 | Field | Value |
 |---|---|

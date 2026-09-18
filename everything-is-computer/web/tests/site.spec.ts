@@ -51,9 +51,37 @@ test("process intake switches journeys and structures pasted notes", async ({ pa
   await expect(page.getByText("Who owns this step from start to finish?")).toBeVisible();
 });
 
-test("clients form keeps fixed fields and sorts by last name A to Z", async ({ page }) => {
+test("clients form saves to the database API, reloads, and sorts by last name A to Z", async ({ page }) => {
+  type StoredClient = { id: number; firstName: string; lastName: string; phone: string; email: string; address: string; notes: string };
+  const stored: StoredClient[] = [];
+  let nextId = 1;
+  await page.route("**/api/clients**", async (route) => {
+    const request = route.request();
+    if (request.method() === "GET") {
+      await route.fulfill({ json: { clients: stored } });
+      return;
+    }
+    if (request.method() === "POST") {
+      const draft = request.postDataJSON() as Omit<StoredClient, "id">;
+      const client: StoredClient = { id: nextId++, ...draft };
+      stored.push(client);
+      await route.fulfill({ status: 201, json: { client } });
+      return;
+    }
+    if (request.method() === "DELETE") {
+      const segments = new URL(request.url()).pathname.split("/").filter(Boolean);
+      const id = Number(segments[segments.length - 1]);
+      const index = stored.findIndex((client) => client.id === id);
+      if (index >= 0) stored.splice(index, 1);
+      await route.fulfill({ status: 204, body: "" });
+      return;
+    }
+    await route.fallback();
+  });
+
   await page.goto("/clients/");
   await expect(page.getByRole("heading", { name: "Add a client" })).toBeVisible();
+  await expect(page.getByRole("status")).toHaveCount(0);
   const add = page.getByRole("button", { name: "Add client" });
   await page.getByLabel("First name").fill("Zoe");
   await page.getByLabel("Last name").fill("Adams");
@@ -64,6 +92,13 @@ test("clients form keeps fixed fields and sorts by last name A to Z", async ({ p
   await add.click();
   await expect(page.locator(".client-entry-head strong").first()).toHaveText("Adams, Zoe");
   await expect(page.locator(".client-entry-head strong").last()).toHaveText("Young, Amy");
+
+  await page.reload();
+  await expect(page.locator(".client-entry-head strong").first()).toHaveText("Adams, Zoe");
+  await expect(page.locator(".client-entry-head strong").last()).toHaveText("Young, Amy");
+
+  await page.getByRole("button", { name: /Remove/ }).first().click();
+  await expect(page.locator(".client-entry-head strong")).toHaveText(["Young, Amy"]);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
 });
 
