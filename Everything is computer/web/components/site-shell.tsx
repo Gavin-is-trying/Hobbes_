@@ -1,7 +1,7 @@
 import Link from "next/link";
-import type { ReactNode } from "react";
+import { Fragment, type ReactNode } from "react";
 
-type Section = { name: string };
+type Section = { name: string; stages: string[] };
 
 export function SiteShell({ sections, children }: { sections: Section[]; children: ReactNode }) {
   return (
@@ -15,7 +15,7 @@ export function SiteShell({ sections, children }: { sections: Section[]; childre
              <Link className="nav-highlight" href="/intake">Build a process</Link>
             </nav>
           <div className="section-nav">
-            <nav aria-label="Sections">{sections.map((section) => <Link href={`/library?section=${encodeURIComponent(section.name)}`} key={section.name}>{section.name}</Link>)}</nav>
+            <nav aria-label="Sections">{sections.map((section) => <Fragment key={section.name}><Link href={`/library?section=${encodeURIComponent(section.name)}`}>{section.name}</Link>{section.stages.includes("Clients") && <Link className="nav-sub" href="/clients">Clients</Link>}</Fragment>)}</nav>
           </div>
         </div>
       </aside>
