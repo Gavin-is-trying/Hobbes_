@@ -1,6 +1,6 @@
 # Hobbes public knowledge site
 
-A static Next.js documentation portal backed by this repository's Markdown files. No database, login, or API keys are required.
+A Next.js documentation portal backed by this repository's Markdown files, plus a small Postgres-backed database for the Clients intake form. Markdown pages stay statically generated at build time; only the Clients API runs on the server. No login or API keys are required, but the Clients form needs a `DATABASE_URL`.
 
 ## Local development
 
@@ -8,8 +8,11 @@ Install Node.js 22, then run these commands from `Everything is computer/web/`:
 
 ```sh
 npm ci
+cp .env.example .env.local   # set DATABASE_URL to a Postgres connection string
 npm run dev
 ```
+
+Any Postgres database works. The `clients` table is created automatically on the first request, so no migration step is required. Without `DATABASE_URL`, the document site still runs and the Clients page reports that the database is unavailable.
 
 Validation:
 
@@ -19,16 +22,16 @@ npm run build
 npm run typecheck
 ```
 
-Browser regression tests require Python 3 and Playwright Chromium. After building:
+Browser regression tests require Playwright Chromium. After installing the browser:
 
 ```sh
 npx playwright install chromium
 npm run test:e2e
 ```
 
-The test runner starts and stops a local static server automatically and checks desktop and mobile layouts, search, filtering, history, heading anchors, and Mermaid rendering. Screenshots are saved under the ignored `test-results/` directory.
+The test runner starts and stops a local Next.js development server automatically and checks desktop and mobile layouts, search, filtering, history, heading anchors, Mermaid rendering, and the Clients form. The Clients test intercepts the API so it does not need a database. Screenshots are saved under the ignored `test-results/` directory.
 
-`npm run build` generates a static site in `Everything is computer/web/out/`. To preview the export, run `python3 -m http.server 3000 --directory out` from `Everything is computer/web/` and visit http://localhost:3000. `next start` is not supported for static exports.
+`npm run build` generates a normal Next.js server build in `Everything is computer/web/.next/`. Start it with `npm run start` and visit http://localhost:3000 (the document pages are still pre-rendered; only the Clients API is dynamic).
 
 ## Deploy to Vercel
 
@@ -36,11 +39,10 @@ The test runner starts and stops a local static server automatically and checks 
 2. In Vercel, choose **Add New → Project** and import `Gavin-is-trying/Hobbes_`.
 3. Choose **Next.js** and set **Root Directory** to `Everything is computer/web`. Update this setting on the existing Vercel project before deploying the relocation.
 4. Enable **Include source files outside of the Root Directory in the Build Step**. The original documents live two levels above `Everything is computer/web/`.
-5. Use Node.js **22.x**, install command `npm ci`, and build command `npm run build`. Leave **Output Directory** at the Next.js default; disable any dashboard override set to `out`. `vercel.json` declares the Next.js framework so Vercel does not treat the site as a generic static deployment, but does not override the dashboard build command. Vercel's Next.js integration reads build metadata from `.next` and handles `output: "export"` automatically. The local static export still lives in `out/`.
-6. Deploy. No environment variables are needed; do **not** copy `HOBBES_API_KEY` into this project.
+5. Use Node.js **22.x**, install command `npm ci`, and build command `npm run build`. Leave **Output Directory** at the Next.js default; do not set a static `out` directory. `vercel.json` declares the Next.js framework so Vercel deploys the server build and the `/api/clients` routes. The document pages remain pre-rendered at build time.
+6. Add a Postgres database (for example Neon, Supabase, or any hosted Postgres) and set the `DATABASE_URL` environment variable for Production and Preview. The `clients` table is created automatically on first use. Do **not** copy `HOBBES_API_KEY` into this project, and do not commit the connection string.
 7. Under project Git settings, use `main` as the production branch. New pushes deploy automatically; pull requests receive previews. Ensure builds are not skipped for changes to the source documents outside `Everything is computer/web/`.
-
-Vercel account access and the actual deployment are separate from scaffolding the code. Add a custom domain later under **Settings → Domains**.
+8. Deploy. The Clients page now stores customer records in that database only; the repository and published Markdown stay free of customer data. Vercel account access, the database, and the actual deployment are separate from scaffolding the code. Add a custom domain later under **Settings → Domains**.
 
 ## Publishing content
 
@@ -62,11 +64,33 @@ GFM tables, lists, task lists, code blocks, and heading anchors are supported. Y
 
 `app/globals.css` uses lawn green `#0E5B2D` and forest green `#153619`, sampled from the JPEGs in the repository's `TLC-OS/04 Brand Assets/` (JPEG compression introduces minor variations). White and pale-green supporting surfaces retain readable contrast. Display text uses an Optima/Candara/Trebuchet MS system-font stack to approximate the upright, flared wordmark; it is not an exact font identification and varies by platform. Body text stays in Arial/Helvetica for long-document readability. No remote fonts are loaded.
 
+## Clients database
+
+The `/clients` page is the only server-backed feature. It reads and writes a `clients` table in the Postgres database named by `DATABASE_URL`. The table is created automatically on the first request:
+
+```sql
+CREATE TABLE IF NOT EXISTS clients (
+  id serial PRIMARY KEY,
+  first_name text NOT NULL DEFAULT '',
+  last_name text NOT NULL DEFAULT '',
+  phone text NOT NULL DEFAULT '',
+  email text NOT NULL DEFAULT '',
+  address text NOT NULL DEFAULT '',
+  notes text NOT NULL DEFAULT '',
+  created_at timestamptz NOT NULL DEFAULT now()
+);
+```
+
+Routes: `GET /api/clients/` lists records, `POST /api/clients/` validates and inserts one, and `DELETE /api/clients/:id/` removes one. Input is trimmed and length-limited by `lib/clients.ts`; invalid input returns `400`. Customer records live only in the database: never commit real names, phone numbers, email addresses, or street addresses to this repository, and never copy connection strings into source.
+
 ## Project structure
 
 - `app/`: home, library, intake, clients, document pages, and shared styles
-- `components/`: navigation, browser-side search, and diagram rendering
+- `app/api/clients/`: the Clients list/create/delete route handlers
+- `components/`: navigation, browser-side search, the Clients form, and diagram rendering
 - `lib/content.ts`: allowlisted build-time document discovery and links
-- `lib/content.test.ts`: document discovery and routing regression tests
+- `lib/clients.ts`: shared client types, validation, and last-name sort
+- `lib/db.ts`: Postgres pool, automatic schema, and client queries
+- `lib/*.test.ts`: document discovery, routing, and client validation regression tests
 
 The owner-only OpenCode workflow's canonical definition is at `Everything is computer/workflows/opencode.yml` and is mirrored to `.github/workflows/opencode.yml`, where GitHub Actions runs it. It is independent of this website.

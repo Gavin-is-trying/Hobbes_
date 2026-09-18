@@ -24,10 +24,14 @@ and reference the superseded decision.
 | D-005 | 2026-09-18 | Publishing client data | Implied by a client list on the website | Guide privacy rules | VERIFY BEFORE REMOVAL; keep the browser form local and do not commit personal data | Unassigned | Avoids public exposure of customer identities | Confirm the approved system of record and redaction policy | Unscheduled | — |
 | D-006 | 2026-09-18 | System of record and owner | Not supplied | Raw request | BLOCKER: confirm before durable storage | Unassigned | Entries remain reliable and protected | Name the system and accountable seat | Unscheduled | — |
 | D-007 | 2026-09-18 | Automation | Not described | No volume or baseline | REJECT AUTOMATION FOR NOW | Unassigned | Avoid automating an unvalidated form | Reassess after manual use and a baseline | Unscheduled | — |
+| D-008 | 2026-09-18 | System of record | D-006 blocked durable storage; entries were browser-only | Issue #14; web implementation | ADOPT the hosted Postgres client database behind the Clients page, connection supplied through `DATABASE_URL` | Unassigned | Entries persist and reload across sessions and devices | Save and reload an entry; confirm the schema is created | Unscheduled | D-006 |
+| D-009 | 2026-09-18 | Client data in the repository | Public allowlist could expose committed customer data | Guide privacy rules; D-005 | RETAIN the prohibition: customer records live only in the database; repository documents define format and sort only | Unassigned | No customer identities are published | Review allowlisted documents for personal data | Unscheduled | D-005 |
+| D-010 | 2026-09-18 | Required fields | SOP listed phone, email, and address as required, but the form never enforced them | SOP draft; web implementation | CLARIFY: at least one name is required; contact fields stay optional until known | Unassigned | SOP matches the form's actual behavior | Compare the form and the SOP field table | Unscheduled | — |
 
 ## Unresolved Decisions
 
-- Confirm the approved system of record.
 - Confirm the accountable process owner.
-- Verify privacy, consent, and retention rules before storing personal data.
+- Define access control for the Clients API; it currently has no authentication.
+- Verify privacy, consent, and retention rules for the database.
+- Confirm database backup and retention configuration.
 - Confirm the intended notes scope and any length guidance.

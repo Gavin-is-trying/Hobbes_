@@ -2,8 +2,8 @@ import type { NextConfig } from "next";
 import path from "node:path";
 
 const config: NextConfig = {
-  output: "export",
   trailingSlash: true,
+  allowedDevOrigins: ["127.0.0.1"],
   turbopack: { root: path.resolve(process.cwd(), "../..") },
 };
 
