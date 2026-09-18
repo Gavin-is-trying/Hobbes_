@@ -20,7 +20,7 @@ elon_review_status: completed
 
 ## Processing Instructions
 
-If process redesign is requested, use `Everything is computer/skills/elon-algorithm/SKILL.md`. The current user request controls scope.
+If process redesign is requested, use `everything-is-computer/skills/elon-algorithm/SKILL.md`. The current user request controls scope.
 
 Extract and distinguish:
 

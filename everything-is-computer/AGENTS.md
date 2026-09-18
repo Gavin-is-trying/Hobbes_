@@ -21,14 +21,14 @@ Read the [Process Documentation Guide](../TLC-OS/PROCESS-DOCUMENTATION-GUIDE.md)
 - `process-mapping`: the requested current-state or future-state map, not an automatic full redesign.
 - `process-docs`: an executable SOP, runbook, or playbook; reuse established analysis.
 
-Canonical skills live in `Everything is computer/skills/<name>/SKILL.md` (repository-relative). Explicitly load this instruction file and the relevant canonical skill when starting work; root discovery entry points are not provided. Maintain each procedure only in its canonical file and resolve its reference paths relative to that file.
+Canonical skills live in `everything-is-computer/skills/<name>/SKILL.md` (repository-relative). Explicitly load this instruction file and the relevant canonical skill when starting work; root discovery entry points are not provided. Maintain each procedure only in its canonical file and resolve its reference paths relative to that file.
 
 Verify material owners, metrics, obligations, and approvals against cited sources. Flag contradictions; never invent a resolution. Preserve raw evidence and decision history, and label assumptions and proposed changes. Only the accountable human can approve a process.
 
 ## Website and validation
 
-[web/README.md](web/README.md) covers the static Next.js knowledge site. `Everything is computer/web/lib/content.ts` owns public content discovery and links. Preserve its allowlist, existing document paths/URLs, and privacy boundaries. Source documents in the allowlist are public regardless of an `internal` metadata label.
+[web/README.md](web/README.md) covers the static Next.js knowledge site. `everything-is-computer/web/lib/content.ts` owns public content discovery and links. Preserve its allowlist, existing document paths/URLs, and privacy boundaries. Source documents in the allowlist are public regardless of an `internal` metadata label.
 
-For document changes, check source claims, links, status, and affected references; request an operator walkthrough where execution needs validation. For web behavior, add focused coverage in the existing suites and run from `Everything is computer/web/`: `npm test`, `npm run build`, `npm run typecheck`, then `npm run test:e2e` (see README prerequisites). Do not introduce a test framework for this guidance.
+For document changes, check source claims, links, status, and affected references; request an operator walkthrough where execution needs validation. For web behavior, add focused coverage in the existing suites and run from `everything-is-computer/web/`: `npm test`, `npm run build`, `npm run typecheck`, then `npm run test:e2e` (see README prerequisites). Do not introduce a test framework for this guidance.
 
 Finish with a brief summary, checks actually run, and unresolved items. Never claim approval, testing, or live skill discovery that was not verified.

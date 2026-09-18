@@ -1,4 +1,4 @@
-# Everything is computer
+# everything-is-computer
 
 Machine-facing material lives here; human-facing process evidence, decisions, and
 SOPs stay in the root customer/TLC-OS folders. This folder was initially named
@@ -11,10 +11,10 @@ SOPs stay in the root customer/TLC-OS folders. This folder was initially named
 - [workflows/opencode.yml](workflows/opencode.yml): canonical OpenCode workflow definition, mirrored to the active root GitHub Actions location.
 - [Process Documentation Guide](../TLC-OS/PROCESS-DOCUMENTATION-GUIDE.md): shared process-document rules under `TLC-OS/`.
 
-Explicitly load `Everything is computer/AGENTS.md` and the relevant canonical
+Explicitly load `everything-is-computer/AGENTS.md` and the relevant canonical
 skill when starting an agent task; root discovery pointers are not provided.
 GitHub discovers active workflows only in root `.github/workflows/`. The canonical
-definition in `Everything is computer/workflows/opencode.yml` is mirrored to
+definition in `everything-is-computer/workflows/opencode.yml` is mirrored to
 `.github/workflows/opencode.yml`, where GitHub Actions runs it.
 This folder is excluded from website document discovery, not a secret store.
 
@@ -71,7 +71,7 @@ workflow remains unchanged.
 
 The owner moved the process guide to `TLC-OS/PROCESS-DOCUMENTATION-GUIDE.md`
 and retained the canonical workflow definition at
-`Everything is computer/workflows/opencode.yml`. It is mirrored to
+`everything-is-computer/workflows/opencode.yml`. It is mirrored to
 `.github/workflows/opencode.yml` so GitHub Actions can run it. Guide links use
 the new source path, while the website retains `/docs/process-documentation-guide`
 for existing links. Empty lifecycle workspaces are now created on demand, not
@@ -79,7 +79,7 @@ pre-scaffolded.
 
 ## Deployment and remaining checks
 
-- Set the existing Vercel project's **Root Directory** to `Everything is computer/web`.
+- Set the existing Vercel project's **Root Directory** to `everything-is-computer/web`.
   Keep outside-root source inclusion enabled and ensure root content edits trigger builds.
   Public routes have no new prefix. No hosted deployment was performed.
 - In new Zed/OpenCode sessions, explicitly load this folder's `AGENTS.md` and the

@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-// Next commands run from Everything is computer/web; public content stays at repository root.
+// Next commands run from everything-is-computer/web; public content stays at repository root.
 const root = path.resolve(process.cwd(), "../..");
 const spaces = [
   { name: "Internal Customers" },
