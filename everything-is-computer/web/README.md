@@ -4,7 +4,7 @@ A static Next.js documentation portal backed by this repository's Markdown files
 
 ## Local development
 
-Install Node.js 22, then run these commands from `Everything is computer/web/`:
+Install Node.js 22, then run these commands from `everything-is-computer/web/`:
 
 ```sh
 npm ci
@@ -28,17 +28,17 @@ npm run test:e2e
 
 The test runner starts and stops a local static server automatically and checks desktop and mobile layouts, search, filtering, history, heading anchors, and Mermaid rendering. Screenshots are saved under the ignored `test-results/` directory.
 
-`npm run build` generates a static site in `Everything is computer/web/out/`. To preview the export, run `python3 -m http.server 3000 --directory out` from `Everything is computer/web/` and visit http://localhost:3000. `next start` is not supported for static exports.
+`npm run build` generates a static site in `everything-is-computer/web/out/`. To preview the export, run `python3 -m http.server 3000 --directory out` from `everything-is-computer/web/` and visit http://localhost:3000. `next start` is not supported for static exports.
 
 ## Deploy to Vercel
 
 1. Push the website files and `package-lock.json` to GitHub.
 2. In Vercel, choose **Add New → Project** and import `Gavin-is-trying/Hobbes_`.
-3. Choose **Next.js** and set **Root Directory** to `Everything is computer/web`. Update this setting on the existing Vercel project before deploying the relocation.
-4. Enable **Include source files outside of the Root Directory in the Build Step**. The original documents live two levels above `Everything is computer/web/`.
+3. Choose **Next.js** and set **Root Directory** to `everything-is-computer/web`. Update this setting on the existing Vercel project before deploying the relocation.
+4. Enable **Include source files outside of the Root Directory in the Build Step**. The original documents live two levels above `everything-is-computer/web/`.
 5. Use Node.js **22.x**, install command `npm ci`, and build command `npm run build`. Leave **Output Directory** at the Next.js default; disable any dashboard override set to `out`. `vercel.json` declares the Next.js framework so Vercel does not treat the site as a generic static deployment, but does not override the dashboard build command. Vercel's Next.js integration reads build metadata from `.next` and handles `output: "export"` automatically. The local static export still lives in `out/`.
 6. Deploy. No environment variables are needed; do **not** copy `HOBBES_API_KEY` into this project.
-7. Under project Git settings, use `main` as the production branch. New pushes deploy automatically; pull requests receive previews. Ensure builds are not skipped for changes to the source documents outside `Everything is computer/web/`.
+7. Under project Git settings, use `main` as the production branch. New pushes deploy automatically; pull requests receive previews. Ensure builds are not skipped for changes to the source documents outside `everything-is-computer/web/`.
 
 Vercel account access and the actual deployment are separate from scaffolding the code. Add a custom domain later under **Settings → Domains**.
 
@@ -50,7 +50,7 @@ The build publishes all non-hidden `.md` files recursively inside:
 - `External Customers/`
 - `Internal Customers/`
 
-The guide lives at `TLC-OS/PROCESS-DOCUMENTATION-GUIDE.md` and is published through the `TLC-OS/` scan. These sources are explicitly allowlisted in `lib/content.ts`; the entire `Everything is computer/` tree (including skills), dotfiles, symlinks, and `.gitkeep` placeholders are excluded. Existing documents are not copied or modified.
+The guide lives at `TLC-OS/PROCESS-DOCUMENTATION-GUIDE.md` and is published through the `TLC-OS/` scan. These sources are explicitly allowlisted in `lib/content.ts`; the entire `everything-is-computer/` tree (including skills), dotfiles, symlinks, and `.gitkeep` placeholders are excluded. Existing documents are not copied or modified.
 
 **Everything in this allowlist is public**, including intake transcripts, decisions, templates, and documents in `Internal Customers`. Search also sends these documents to the browser. Review content before merging; neither an obscure URL nor a hidden navigation link makes it private.
 
@@ -69,4 +69,4 @@ GFM tables, lists, task lists, code blocks, and heading anchors are supported. Y
 - `lib/content.ts`: allowlisted build-time document discovery and links
 - `lib/content.test.ts`: document discovery and routing regression tests
 
-The owner-only OpenCode workflow's canonical definition is at `Everything is computer/workflows/opencode.yml` and is mirrored to `.github/workflows/opencode.yml`, where GitHub Actions runs it. It is independent of this website.
+The owner-only OpenCode workflow's canonical definition is at `everything-is-computer/workflows/opencode.yml` and is mirrored to `.github/workflows/opencode.yml`, where GitHub Actions runs it. It is independent of this website.

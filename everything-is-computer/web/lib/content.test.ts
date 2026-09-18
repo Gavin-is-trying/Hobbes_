@@ -13,7 +13,7 @@ test("loads real Markdown from only the public allowlist", () => {
   assert.ok(documents.every((doc) => /^(TLC-OS\/|External Customers\/|Internal Customers\/)/.test(doc.path)));
   assert.ok(documents.every((doc) => doc.body.length > 0 && !doc.path.includes(".gitkeep")));
   assert.equal(new Set(documents.map((doc) => doc.slug)).size, documents.length);
-  assert.ok(!documents.some((doc) => doc.path.startsWith("Everything is computer/")));
+  assert.ok(!documents.some((doc) => doc.path.startsWith("everything-is-computer/")));
   assert.ok(documents.some((doc) => doc.path === "TLC-OS/03 Org Chart/org-chart.md"));
 });
 
@@ -55,7 +55,7 @@ test("encoded source links resolve; non-document links fall back to GitHub", () 
   const target = documents.find((doc) => doc.path.endsWith("Lead Intake SOP.md"))!;
   assert.equal(resolveDocLink(guide, encodeURI(`../${target.path}`)), docHref(target));
   assert.equal(resolveDocLink(guide, "../Internal Customers/"), "https://github.com/Gavin-is-trying/Hobbes_/blob/main/Internal%20Customers/");
-  assert.equal(resolveDocLink(guide, "../Everything is computer/AGENTS.md"), "https://github.com/Gavin-is-trying/Hobbes_/blob/main/Everything%20is%20computer/AGENTS.md");
-  assert.equal(resolveDocLink(guide, "../Everything is computer/workflows/opencode.yml"), "https://github.com/Gavin-is-trying/Hobbes_/blob/main/Everything%20is%20computer/workflows/opencode.yml");
+  assert.equal(resolveDocLink(guide, "../everything-is-computer/AGENTS.md"), "https://github.com/Gavin-is-trying/Hobbes_/blob/main/everything-is-computer/AGENTS.md");
+  assert.equal(resolveDocLink(guide, "../everything-is-computer/workflows/opencode.yml"), "https://github.com/Gavin-is-trying/Hobbes_/blob/main/everything-is-computer/workflows/opencode.yml");
   assert.equal(resolveDocLink(guide, "../../outside.md"), "#");
 });

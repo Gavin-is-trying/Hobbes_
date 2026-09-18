@@ -19,11 +19,11 @@ stage/
 Create `intake/`, `reviews/`, `decisions/`, and `SOPs/` only when an artifact needs them; empty stages retain only a stage-level `.gitkeep`. `.gitkeep` only preserves an empty directory in Git; never put content in it.
 `TLC-OS` is foundational context: add a process workspace only for an actual
 recurring workflow. Website code, skills, and local tooling live separately in
-`Everything is computer/`; human-facing process documents stay in their stages.
+`everything-is-computer/`; human-facing process documents stay in their stages.
 
 ## What You Create
 
-Copy the [raw intake template](<../Everything is computer/skills/elon-algorithm/templates/raw-process-intake.md>)
+Copy the [raw intake template](<../everything-is-computer/skills/elon-algorithm/templates/raw-process-intake.md>)
 into the relevant stage's `intake/` folder as `YYYY-MM-DD-process-name-transcript.md`.
 Use Markdown; paste a `.txt` export into the template and add its metadata.
 
@@ -35,8 +35,8 @@ with `[unclear]`, `[inaudible]`, or `[possible transcription error]`.
 ## Agent Setup and Task Scope
 
 Paths in backticks below are repository-relative. Open the repository as the agent project. Explicitly attach/read
-`Everything is computer/AGENTS.md`, then the relevant procedure at
-`Everything is computer/skills/<name>/SKILL.md`. Root discovery entry points
+`everything-is-computer/AGENTS.md`, then the relevant procedure at
+`everything-is-computer/skills/<name>/SKILL.md`. Root discovery entry points
 are not provided; do not assume Zed or OpenCode automatically loads these
 nested files.
 
@@ -103,7 +103,7 @@ Use these metadata values; do not invent verification or approval to advance the
 
 Example full-package request:
 
-> Run `Everything is computer/skills/elon-algorithm/` against this intake.
+> Run `everything-is-computer/skills/elon-algorithm/` against this intake.
 > Challenge requirements and steps, then write the review, decision log, and
 > proposed SOP in the sibling directories. Label unknowns and expert-verification items.
 
@@ -122,7 +122,7 @@ conflicting claims; skill examples are not company policy or measured performanc
 ## Privacy, Security, and Retention
 
 **The knowledge site publishes all allowlisted content, including intake,
-decisions, and internal-customer documents.** See the [website publishing rules](<../Everything is computer/web/README.md#publishing-content>).
+decisions, and internal-customer documents.** See the [website publishing rules](<../everything-is-computer/web/README.md#publishing-content>).
 An `internal` metadata label does not restrict access; search sends document bodies
 to browsers. Review content before committing, merging, or publishing.
 

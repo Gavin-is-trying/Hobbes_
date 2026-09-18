@@ -21,8 +21,8 @@ elon_review_status: completed
 ## Processing Instructions
 
 The current user request controls scope. Redesign uses
-`Everything is computer/skills/elon-algorithm/SKILL.md`; the executable document
-uses `Everything is computer/skills/process-docs/SKILL.md`. Locations, status,
+`everything-is-computer/skills/elon-algorithm/SKILL.md`; the executable document
+uses `everything-is-computer/skills/process-docs/SKILL.md`. Locations, status,
 privacy, and retention follow `TLC-OS/PROCESS-DOCUMENTATION-GUIDE.md`.
 
 ## Context Known to the Request
