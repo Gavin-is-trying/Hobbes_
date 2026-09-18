@@ -54,7 +54,7 @@ The guide lives at `TLC-OS/PROCESS-DOCUMENTATION-GUIDE.md` and is published thro
 
 **Everything in this allowlist is public**, including intake transcripts, decisions, templates, and documents in `Internal Customers`. Search also sends these documents to the browser. Review content before merging; neither an obscure URL nor a hidden navigation link makes it private.
 
-Add or edit Markdown and redeploy to update the site. URLs derive from the full source path, so moving or renaming a document changes its URL. The explicit legacy exception in `lib/content.ts` is `TLC-OS/PROCESS-DOCUMENTATION-GUIDE.md`, which preserves `/docs/process-documentation-guide`. Duplicate normalized URLs fail the build rather than silently overwriting pages. Empty sections remain selectable and show "No documents found." in search; lifecycle stage directories are discovered but not rendered as separate navigation.
+Add or edit Markdown and redeploy to update the site. URLs derive from the full source path, so moving or renaming a document changes its URL. The explicit legacy exception in `lib/content.ts` is `TLC-OS/PROCESS-DOCUMENTATION-GUIDE.md`, which preserves `/docs/process-documentation-guide`. Duplicate normalized URLs fail the build rather than silently overwriting pages. Empty sections remain selectable and show "No documents found." in search; lifecycle stage directories are discovered but not rendered as separate navigation, except the `Clients` category under `TLC-OS`, which links to the `/clients` intake form.
 
 GFM tables, lists, task lists, code blocks, and heading anchors are supported. YAML frontmatter and raw HTML are not rendered. Relative document links route to the corresponding website page; other repository references link to GitHub. Images are displayed as text references rather than loading remote tracking URLs. Supported Mermaid diagrams are rendered locally with a visible source fallback; unsupported syntax remains readable as source.
 
@@ -64,7 +64,7 @@ GFM tables, lists, task lists, code blocks, and heading anchors are supported. Y
 
 ## Project structure
 
-- `app/`: home, library, document pages, and shared styles
+- `app/`: home, library, intake, clients, document pages, and shared styles
 - `components/`: navigation, browser-side search, and diagram rendering
 - `lib/content.ts`: allowlisted build-time document discovery and links
 - `lib/content.test.ts`: document discovery and routing regression tests

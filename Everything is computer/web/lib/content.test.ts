@@ -31,6 +31,17 @@ test("section order and empty lifecycle stage discovery are preserved", () => {
   assert.ok(!section.stages.includes(".gitkeep"));
 });
 
+test("clients workspace is discovered under TLC-OS", () => {
+  const tlc = getSections().find((s) => s.name === "TLC-OS")!;
+  assert.ok(tlc.stages.includes("Clients"));
+  const sop = documents.find((doc) => doc.path === "TLC-OS/Clients/SOPs/Client Intake SOP.md");
+  assert.ok(sop);
+  assert.equal(sop.section, "TLC-OS");
+  const registry = documents.find((doc) => doc.path === "TLC-OS/Clients/Client Registry.md");
+  assert.ok(registry);
+  assert.match(registry.body, /last name, A to Z/i);
+});
+
 test("relative document links retain fragments", () => {
   const target = documents.find((doc) => doc.path === "External Customers/01 Leads/SOPs/Lead Intake SOP.md")!;
   assert.equal(resolveDocLink(guide, `../${target.path}#example`), `${docHref(target)}#example`);

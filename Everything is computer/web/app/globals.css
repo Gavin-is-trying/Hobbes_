@@ -559,6 +559,104 @@ h3 {
    margin-top:14px;
  }
 
+ .nav-sub {
+   padding-left:24px!important;
+   font-size:12px;
+   color:var(--muted);
+ }
+
+ .client-fields {
+   display:grid;
+   grid-template-columns:repeat(2,minmax(0,1fr));
+   gap:16px;
+ }
+
+ .client-field {
+   display:block;
+ }
+
+ .client-field-wide {
+   grid-column:1 / -1;
+ }
+
+ .client-field input,
+ .client-field textarea {
+   display:block;
+   width:100%;
+   min-height:46px;
+   border:1px solid #bfc1b4;
+   border-radius:3px;
+   color:var(--ink);
+   font:inherit;
+   padding:11px 13px;
+ }
+
+ .client-field textarea {
+   min-height:90px;
+   resize:vertical;
+   line-height:1.6;
+ }
+
+ .client-field input::placeholder,
+ .client-field textarea::placeholder {
+   color:var(--muted);
+ }
+
+ .client-list {
+   list-style:none;
+   margin:0;
+   padding:0;
+ }
+
+ .client-entry {
+   border-top:1px solid var(--line);
+   padding:18px 0;
+ }
+
+ .client-entry:first-child {
+   border-top:0;
+ }
+
+ .client-entry-head {
+   display:flex;
+   align-items:flex-start;
+   justify-content:space-between;
+   gap:15px;
+ }
+
+ .client-entry-head strong {
+   display:block;
+   font-size:16px;
+ }
+
+ .client-entry-contact {
+   display:block;
+   color:var(--muted);
+   font-size:12px;
+   margin-top:4px;
+ }
+
+ .client-entry-fields {
+   display:grid;
+   grid-template-columns:repeat(4,minmax(0,1fr));
+   gap:12px;
+   margin:14px 0 0;
+ }
+
+ .client-entry-fields dt {
+   color:var(--muted);
+   font-size:10px;
+   font-weight:700;
+   letter-spacing:1px;
+   text-transform:uppercase;
+ }
+
+ .client-entry-fields dd {
+   font-size:13px;
+   margin:3px 0 0;
+   overflow-wrap:anywhere;
+ }
+
 
 
 .library-controls {
@@ -1052,6 +1150,9 @@ input::placeholder {
    .intake-results {
      grid-template-columns:1fr;
    }
+   .client-entry-fields {
+     grid-template-columns:repeat(2,minmax(0,1fr));
+   }
    .page-heading h1 {
      font-size:44px;
    }
@@ -1079,7 +1180,8 @@ input::placeholder {
     padding-top:0;
   }
   .section-nav {
-    display:none;
+    margin-top:18px;
+    padding-top:14px;
   }
   .primary-nav {
     flex-direction:row;
@@ -1122,6 +1224,10 @@ input::placeholder {
    }
    .intake-actions .button-primary {
      margin-left:0;
+   }
+   .client-fields,
+   .client-entry-fields {
+     grid-template-columns:1fr;
    }
    input[type=search],select {
     font-size:16px;

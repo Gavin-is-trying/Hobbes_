@@ -7,7 +7,7 @@ test("home has real sections and fits the viewport", async ({ page }, testInfo) 
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Documents");
   const sectionOrder = ["Internal Customers", "External Customers", "TLC-OS"];
   await expect(page.locator(".space-card h2")).toHaveText(sectionOrder);
-  await expect(page.locator(".section-nav a")).toHaveText(sectionOrder);
+  await expect(page.locator(".section-nav a")).toHaveText([...sectionOrder, "Clients"]);
   await expect(page.locator(".button-primary").first()).toHaveCSS("background-color", "rgb(14, 91, 45)");
   await expect(page.locator("h1")).toHaveCSS("font-family", /Optima/);
   await expect(page.getByRole("link", { name: "Process documentation guide", exact: true })).toBeVisible();
@@ -27,12 +27,12 @@ test("search, section changes, empty states, and browser history work", async ({
   await page.getByRole("button", { name: "Clear filters" }).click();
   await expect(page.locator(".document-card")).toHaveCount(count);
   await page.getByLabel("Section", { exact: true }).selectOption("TLC-OS");
-  await expect(page.locator(".document-card")).toHaveCount(2);
+  await expect(page.locator(".document-card")).toHaveCount(8);
   await page.getByLabel("Section", { exact: true }).selectOption("External Customers");
   await expect(page.locator(".document-card").first()).toContainText("External Customers");
   await page.goBack();
   await expect(page.getByLabel("Section", { exact: true })).toHaveValue("TLC-OS");
-  await expect(page.locator(".document-card")).toHaveCount(2);
+  await expect(page.locator(".document-card")).toHaveCount(8);
   await page.getByLabel("Section", { exact: true }).selectOption("Internal Customers");
   await expect(page.getByRole("heading", { name: "No documents found." })).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
@@ -49,6 +49,22 @@ test("process intake switches journeys and structures pasted notes", async ({ pa
   await page.getByRole("button", { name: "Build process draft" }).click();
   await expect(page.getByRole("heading", { name: "Onboarding process draft" })).toBeVisible();
   await expect(page.getByText("Who owns this step from start to finish?")).toBeVisible();
+});
+
+test("clients form keeps fixed fields and sorts by last name A to Z", async ({ page }) => {
+  await page.goto("/clients/");
+  await expect(page.getByRole("heading", { name: "Add a client" })).toBeVisible();
+  const add = page.getByRole("button", { name: "Add client" });
+  await page.getByLabel("First name").fill("Zoe");
+  await page.getByLabel("Last name").fill("Adams");
+  await page.getByLabel("Phone").fill("555-0101");
+  await add.click();
+  await page.getByLabel("First name").fill("Amy");
+  await page.getByLabel("Last name").fill("Young");
+  await add.click();
+  await expect(page.locator(".client-entry-head strong").first()).toHaveText("Adams, Zoe");
+  await expect(page.locator(".client-entry-head strong").last()).toHaveText("Young, Amy");
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
 });
 
 test("document headings and local Mermaid previews render", async ({ page }) => {
