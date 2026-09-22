@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "start": "next start",
     "typecheck": "tsc --noEmit",
-    "test": "node --experimental-strip-types --test lib/content.test.ts",
+    "test": "node --experimental-strip-types --test lib/*.test.ts",
     "test:e2e": "playwright test"
   },
   "engines": {

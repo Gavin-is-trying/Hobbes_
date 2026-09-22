@@ -1,8 +1,11 @@
 "use client";
 
-import { ChangeEvent, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import type { ChangeEvent } from "react";
+import type { ProcessPayload } from "../lib/intake-types";
+import { IntakeWorkspace } from "./intake-workspace";
 
-type CustomerType = "Internal Customers" | "External Customers";
+type CustomerType = ProcessPayload["customerType"];
 
 type ProcessStep = {
   number: string;
@@ -52,7 +55,22 @@ export function ProcessIntake() {
   const [selectedStep, setSelectedStep] = useState("01");
   const [sourceText, setSourceText] = useState("");
   const [fileName, setFileName] = useState("");
+  const [readingFile, setReadingFile] = useState(false);
+  const [fileError, setFileError] = useState("");
   const [draft, setDraft] = useState<ReturnType<typeof draftFromText> | null>(null);
+  const fileRequest = useRef(0);
+  useEffect(() => () => { ++fileRequest.current; }, []);
+
+  function discardDraft() {
+    ++fileRequest.current;
+    setCustomerType("External Customers");
+    setSelectedStep("01");
+    setSourceText("");
+    setFileName("");
+    setReadingFile(false);
+    setFileError("");
+    setDraft(null);
+  }
   const selected = useMemo(() => steps[customerType].find((step) => step.number === selectedStep) ?? steps[customerType][0], [customerType, selectedStep]);
 
   function changeCustomerType(type: CustomerType) {
@@ -61,14 +79,27 @@ export function ProcessIntake() {
     setDraft(null);
   }
 
-  function handleFile(event: ChangeEvent<HTMLInputElement>) {
+  async function handleFile(event: ChangeEvent<HTMLInputElement>) {
     const file = event.target.files?.[0];
     if (!file) return;
-    setFileName(file.name);
-    const reader = new FileReader();
-    reader.onload = () => setSourceText(typeof reader.result === "string" ? reader.result : "");
-    reader.readAsText(file);
-    setDraft(null);
+    event.target.value = "";
+    const token = ++fileRequest.current;
+    setFileError("");
+    setReadingFile(true);
+    try {
+      if (file.size > 200000) throw new Error("Choose a plain-text file with at most 50,000 characters.");
+      const text = await file.text();
+      if (token !== fileRequest.current) return;
+      if (text.length > 50000) throw new Error("Source notes must be at most 50,000 characters. Your previous notes have not been replaced.");
+      setSourceText(text);
+      setFileName(file.name);
+      setDraft(null);
+    } catch (error) {
+      if (token !== fileRequest.current) return;
+      setFileError(error instanceof Error ? error.message : "The file could not be read. Your previous notes have not been replaced.");
+    } finally {
+      if (token === fileRequest.current) setReadingFile(false);
+    }
   }
 
   function generateDraft() {
@@ -85,31 +116,69 @@ export function ProcessIntake() {
         </div>
       </header>
 
-      <section className="intake-panel" aria-labelledby="customer-type-heading">
-        <div className="intake-section-heading">
-          <div><span className="eyebrow">01 / Journey</span><h2 id="customer-type-heading">Who is this process for?</h2></div>
-          <span className="step-count">{steps[customerType].length} steps</span>
-        </div>
-        <div className="customer-tabs" role="tablist" aria-label="Customer type">
-          {(Object.keys(steps) as CustomerType[]).map((type) => <button className={customerType === type ? "customer-tab active" : "customer-tab"} key={type} onClick={() => changeCustomerType(type)} role="tab" aria-selected={customerType === type}>{type}</button>)}
-        </div>
-        <div className="process-steps" aria-label={`${customerType} steps`}>
-          {steps[customerType].map((step) => <button className={selected.number === step.number ? "process-step selected" : "process-step"} key={step.number} onClick={() => { setSelectedStep(step.number); setDraft(null); }}><span>{step.number}</span><strong>{step.name}</strong></button>)}
-        </div>
-        <div className="selected-step"><span className="selected-step-number">{selected.number}</span><div><strong>{selected.name}</strong><p>{selected.description}</p></div></div>
-      </section>
+      <IntakeWorkspace kind="process" dirty={Boolean(sourceText || draft || readingFile)} onDiscard={discardDraft}>
+        {({ submissions, save, saving, locked, publication }) => <>
+          <fieldset className="intake-fields" disabled={locked || readingFile}>
+            <section className="intake-panel" aria-labelledby="customer-type-heading">
+              <div className="intake-section-heading">
+                <div><span className="eyebrow">01 / Journey</span><h2 id="customer-type-heading">Who is this process for?</h2></div>
+                <span className="step-count">{steps[customerType].length} steps</span>
+              </div>
+              <div className="customer-tabs" role="tablist" aria-label="Customer type">
+                {(Object.keys(steps) as CustomerType[]).map((type) => <button className={customerType === type ? "customer-tab active" : "customer-tab"} key={type} onClick={() => changeCustomerType(type)} role="tab" aria-selected={customerType === type}>{type}</button>)}
+              </div>
+              <div className="process-steps" aria-label={`${customerType} steps`}>
+                {steps[customerType].map((step) => <button className={selected.number === step.number ? "process-step selected" : "process-step"} key={step.number} onClick={() => { setSelectedStep(step.number); setDraft(null); }}><span>{step.number}</span><strong>{step.name}</strong></button>)}
+              </div>
+              <div className="selected-step"><span className="selected-step-number">{selected.number}</span><div><strong>{selected.name}</strong><p>{selected.description}</p></div></div>
+            </section>
 
-      <section className="intake-panel" aria-labelledby="source-heading">
-        <div className="intake-section-heading"><div><span className="eyebrow">02 / Source material</span><h2 id="source-heading">Add what you know</h2></div></div>
-        <label className="field-label" htmlFor="process-notes">Paste notes, a transcript, or an existing procedure</label>
-        <textarea id="process-notes" value={sourceText} onChange={(event) => { setSourceText(event.target.value); setFileName(""); setDraft(null); }} placeholder="Example: The lead comes in through the website. We reply within one business day, ask about their goals, and book a call..." />
-        <div className="intake-actions"><label className="button button-secondary upload-button"><span>Upload .txt file</span><input type="file" accept=".txt,text/plain" onChange={handleFile} /></label><span className="file-name" aria-live="polite">{fileName || "Plain text only · nothing leaves this browser"}</span><button className="button button-primary" onClick={generateDraft} disabled={!sourceText.trim()}>Build process draft</button></div>
-      </section>
+            <section className="intake-panel" aria-labelledby="source-heading">
+              <div className="intake-section-heading"><div><span className="eyebrow">02 / Source material</span><h2 id="source-heading">Add what you know</h2></div></div>
+              <label className="field-label" htmlFor="process-notes">Paste notes, a transcript, or an existing procedure</label>
+              <textarea id="process-notes" value={sourceText} maxLength={50000} onChange={(event) => { setSourceText(event.target.value); setFileName(""); setFileError(""); setDraft(null); }} placeholder="Example: The lead comes in through the website. We reply within one business day, ask about their goals, and book a call..." />
+              <div className="intake-actions"><label className="button button-secondary upload-button"><span>Upload .txt file</span><input type="file" accept=".txt,text/plain" onChange={handleFile} /></label><span className="file-name" aria-live="polite">{readingFile ? "Reading file…" : fileName || "Plain text · private until you choose to save"}</span><button className="button button-primary" onClick={generateDraft} disabled={!sourceText.trim()}>Build process draft</button></div>
+              {fileError && <p role="alert">{fileError}</p>}
+            </section>
 
-      {draft && <section className="intake-results" aria-live="polite" aria-labelledby="draft-heading">
-        <div className="draft-column"><span className="eyebrow">03 / Structured draft</span><h2 id="draft-heading">{draft.title}</h2><p className="result-note">These actions were pulled from your source. Review and edit them before treating this as an approved process.</p><ol className="action-list">{draft.actions.map((action, index) => <li key={`${action}-${index}`}><span>{String(index + 1).padStart(2, "0")}</span><input aria-label={`Process action ${index + 1}`} defaultValue={action} /></li>)}</ol></div>
-        <div className="gaps-column"><span className="eyebrow">Open questions</span><h2>Fill the gaps</h2><p className="result-note">Answer these before publishing the process.</p><ul className="gap-list">{draft.gaps.map((gap) => <li key={gap}><span>?</span>{gap}</li>)}</ul><button className="button button-secondary" onClick={() => document.getElementById("process-notes")?.focus()}>Add more notes</button></div>
-      </section>}
+            {draft && <section className="intake-results" aria-labelledby="draft-heading">
+              <div className="draft-column">
+                <span className="eyebrow">03 / Structured draft</span><h2 id="draft-heading">{draft.title}</h2>
+                <p className="result-note">The first five nonempty source lines start this draft. Review and edit the actions before treating this as an approved process. Saving preserves your notes and edited actions privately; it does not publish them.</p>
+                <ol className="action-list">{draft.actions.map((action, index) => <li key={index}><span>{String(index + 1).padStart(2, "0")}</span><input aria-label={`Process action ${index + 1}`} value={action} maxLength={2000} onChange={(event) => setDraft((current) => current && ({ ...current, actions: current.actions.map((value, actionIndex) => actionIndex === index ? event.target.value : value) }))} /></li>)}</ol>
+                {draft.actions.some((action) => !action.trim() || action.length > 2000) && <p role="alert">Each action needs 1–2,000 characters. Edit empty or overlong actions before saving.</p>}
+              </div>
+              <div className="gaps-column"><span className="eyebrow">Open questions</span><h2>Fill the gaps</h2><p className="result-note">Answer these before publishing the process.</p><ul className="gap-list">{draft.gaps.map((gap) => <li key={gap}><span>?</span>{gap}</li>)}</ul><button className="button button-secondary" onClick={() => document.getElementById("process-notes")?.focus()}>Add more notes</button></div>
+            </section>}
+          </fieldset>
+
+          {draft && <div className="intake-actions">
+            <button className="button button-primary" type="button" disabled={saving || readingFile || draft.actions.some((action) => !action.trim() || action.length > 2000)} onClick={() => {
+              void save({ customerType, selectedStep, sourceText, actions: draft.actions }, () => {
+                setSourceText("");
+                setFileName("");
+                setDraft(null);
+              });
+            }}>{saving ? "Saving…" : locked ? "Retry save" : "Save process"}</button>
+          </div>}
+
+          <section className="intake-panel saved-processes" aria-labelledby="saved-processes-heading">
+            <div className="intake-section-heading"><div><span className="eyebrow">04 / Private records</span><h2 id="saved-processes-heading">Saved processes</h2></div></div>
+            {submissions === null ? <p className="result-note">Waiting for saved process records.</p> : submissions.length ? <ol className="client-list">
+              {submissions.map((submission) => {
+                const payload = submission.payload as ProcessPayload;
+                const step = steps[payload.customerType].find((entry) => entry.number === payload.selectedStep);
+                return <li className="client-entry process-entry" key={submission.id}>
+                  <h3>{payload.customerType} · {payload.selectedStep} {step?.name}</h3>
+                  <details><summary>Private source notes</summary><pre className="intake-source-text">{payload.sourceText}</pre></details>
+                  <ol className="saved-process-actions">{payload.actions.map((action, index) => <li key={index}>{action}</li>)}</ol>
+                  {publication(submission)}
+                </li>;
+              })}
+            </ol> : <p className="result-note">No saved processes yet. Build and review a draft above, then save it.</p>}
+          </section>
+        </>}
+      </IntakeWorkspace>
     </div>
   );
 }

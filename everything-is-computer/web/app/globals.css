@@ -659,6 +659,54 @@ h3 {
 
 
 
+.intake-page .intake-fields {
+  border:0;
+  padding:0;
+  margin:0;
+  min-width:0;
+}
+
+.intake-page .intake-publication {
+  border-top:1px solid var(--line);
+  margin-top:22px;
+  padding-top:18px;
+}
+
+.intake-page .intake-review-confirmation {
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  margin-top:16px;
+  font-size:13px;
+}
+
+.intake-page .intake-review-confirmation input {
+  flex-shrink:0;
+  margin-top:3px;
+}
+
+.intake-page .saved-processes {
+  margin-top:24px;
+}
+
+.intake-page .intake-source-text {
+  white-space:pre-wrap;
+  overflow-wrap:anywhere;
+  font:inherit;
+  font-size:13px;
+}
+
+.intake-page .saved-process-actions,
+.intake-page .client-entry-head,
+.intake-page [role="alert"] {
+  overflow-wrap:anywhere;
+}
+
+.intake-page button:disabled {
+  opacity:.6;
+  transform:none;
+}
+
 .library-controls {
   display:grid;
   grid-template-columns:1fr 240px;
