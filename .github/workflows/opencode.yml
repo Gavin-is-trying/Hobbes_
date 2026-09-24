@@ -52,5 +52,6 @@ jobs:
         env:
           OPENROUTER_API_KEY: ${{ secrets.HOBBES_API_KEY }}
         with:
-          model: openrouter/openrouter/auto
+          model: openrouter/z-ai/glm-5.3
+          agent: ${{ contains(github.event.comment.body, '/oc plan') && 'plan' || 'build' }}
           share: false

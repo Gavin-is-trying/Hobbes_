@@ -1,0 +1,16 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "openrouter/z-ai/glm-5.3",
+  "small_model": "openrouter/z-ai/glm-5.3-flash",
+  "agent": {
+    "build": {
+      "mode": "primary",
+      "model": "openrouter/z-ai/glm-5.3"
+    },
+    "plan": {
+      "mode": "primary",
+      "model": "openrouter/anthropic/claude-sonnet-5",
+      "permission": { "edit": "deny", "bash": "deny" }
+    }
+  }
+}
