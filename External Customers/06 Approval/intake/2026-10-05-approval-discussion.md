@@ -44,6 +44,14 @@ This is a desired future state, not a claim that the requirement is currently ac
 
 Gavin described a Jobber setting that he believes can prevent quote acceptance without a card on file. **That capability and the current setting were not verified or enabled.**
 
+### Clarification: card on file only, not mandatory automatic charging
+
+Gavin clarified that the desired prerequisite is **a card on file**, not a requirement for every customer to use automatic charging.
+
+He is comfortable with customers paying after the 1st, within the agreed payment terms. He also wants to preserve manual payment; some customers use that opportunity to add a tip. The rationale discussed is flexibility in payment timing and method.
+
+This does not create standing authorization to charge a stored card or change the billing terms described in the Offer notes.
+
 ### Payment method and charge consent are separate
 
 These notes distinguish:
@@ -60,7 +68,7 @@ Gavin wants to brainstorm what both parties should understand and agree to befor
 Topics raised for exploration include:
 
 - The selected service scope, visit counts, and equal monthly payments
-- Permission for recurring charges
+- Payment-method and charge-consent details, without making automatic charging mandatory
 - Weather interruptions and missed-visit reconciliation
 - Cancellation and any end-of-agreement reconciliation
 - Access arrangements and pets
@@ -69,6 +77,18 @@ Topics raised for exploration include:
 These are **discussion options, not newly adopted terms or conditions**. The selected scope and annual-count descriptions, as well as the confirmed extra-visit approval principle, remain in the Estimate notes. How those points should appear in a pre-service acceptance flow is still to be developed.
 
 The missed-visit settlement method remains **expressly open** in the Offer notes. Nothing here selects automatic refunds, future credits, or another default.
+
+## Access, pets, and waste: bounded discussion
+
+Gavin described access, pet, or waste inconveniences as uncommon and said he is willing to absorb an occasional inconvenience.
+
+For these issues, he does **not** want fees or penalty-based recourse. He questioned the usefulness of adding clauses the company would not actually enforce. This records his operational preference, not a legal opinion about enforceability.
+
+**Whether access or waste language belongs in the Terms of Service remains undecided.** The discussion does not create a universal no-fee promise for every future event.
+
+If an issue persists, Gavin described discussing it with the client and possibly ending the service relationship if it remains unresolved. No termination rule, notice process, fixed escalation sequence, or billing consequence has been established.
+
+The assistant's suggestion of basic practical instructions instead of penalty language remains **a proposal only**. No instructions or terms were adopted.
 
 ## Broader systems context
 
@@ -82,8 +102,8 @@ This Approval intake records the concept as context. It does not build a system,
 
 - The exact current Jobber steps and status transitions
 - The intended card-on-file exceptions and how any future requirement would be introduced
-- What charge-consent wording and acceptance evidence should accompany stored payment information
-- Which proposed safeguards become selected policies in the future Terms of Service
+- What payment-method and charge-consent wording is appropriate while preserving the stated choice not to require automatic charging
+- Which proposed safeguards become selected policies in the future Terms of Service, including whether access or waste language belongs there
 - How external-channel approvals should connect to the final selected scope and terms
 
 These questions do not authorize a Jobber investigation now. No customer outreach, payment action, retroactive agreement change, approval-setting change, or implementation was performed.
