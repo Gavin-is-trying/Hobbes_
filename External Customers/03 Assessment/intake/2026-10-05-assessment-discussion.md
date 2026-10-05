@@ -95,6 +95,19 @@ Gavin described assessment information being kept in text fields, internal notes
 
 Gavin continues to describe a **fourth no-service tier**. The earlier assistant suggestion of a separate exclusion gate before three priority tiers has not been adopted. The geographic details and unresolved screening questions remain in the Leads discussion rather than being repeated here.
 
+## Deferred action: assessor-readiness checklist
+
+Gavin wants an assessor-readiness checklist with the required boxes completed before handing the work to the estimator.
+
+He explicitly deferred creating it: “No, just flag it and I will create it later.”
+
+- **Owner for creating it:** Gavin
+- **Deadline:** Not specified
+- **Current status:** Flagged for later; no checklist or completion criteria have been created or approved
+- **Unadopted suggestions:** The assistant's ideas about critical fields, supporting evidence, and not-applicable handling were not adopted
+
+This records a future user-owned action. It does not implement a handoff gate or create an SOP.
+
 ## Questions still open
 
 - Whether offsite research normally happens before, after, or around the onsite work
