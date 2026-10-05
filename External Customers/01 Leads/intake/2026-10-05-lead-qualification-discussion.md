@@ -74,8 +74,23 @@ These statements capture the current qualification discussion. They do not asser
 - Gavin does not want a fixed minimum monthly account amount.
 - He prefers **gross revenue per hour** over the raw dollar value of an account when judging economic fit.
 - A hypothetical account at **$100 per month with a 20-minute service visit** was discussed. The number of visits per year was not specified, so no hourly rate can be inferred from that example.
-- The minimum acceptable hourly revenue remains unanswered.
+- A firm minimum acceptable hourly revenue and a verified cost floor remain unresolved. Gavin later discussed a possible fall quoting level below; that is not an adopted floor.
 - The assistant suggested annual revenue divided by annual labor hours, including travel and setup. That denominator and time scope have **not been confirmed by Gavin**.
+
+### Comanche Trace customer-base objective
+
+Gavin clarified that the primary objective is to establish a stronghold and customer base across Comanche Trace. Expanding that base takes priority over maximizing additional service revenue from one customer when the two compete.
+
+Long-term customer relationships, reputation, retention, referrals, and opportunities among neighboring properties overlap with that objective. No specific retention, referral, or additional-service requirement was set.
+
+### Fall quoting direction under discussion
+
+- Gavin described approximately **$65 of gross revenue per man-hour** as a reasonable **fall quoting level for net-new customers and leads**.
+- This is a working pricing idea for discussion, not a net-profit figure, an approved minimum, or an instruction to change prices.
+- Covering the costs needed to keep operating the next day matters. The actual cost floor has not been verified.
+- Immediate profit is not the overriding objective in this discussion. Gavin emphasized long-term customer value, relationships, reputation, and establishing the desired Comanche Trace customer base.
+- It remains unclear whether a fall quote would apply throughout an annual agreement, how long it would be held, and which costs and labor time the rate must cover.
+- No repricing of existing customers or actual quote changes were authorized.
 
 ## Provisional ideas discussed
 
@@ -100,11 +115,25 @@ The discussion considered more than vehicle driving:
 
 A nearby property may still be difficult to serve in the same working block. How to compare these factors has not been decided.
 
+### Demand-responsive quoting proposal
+
+Gavin proposed exploring quote adjustments based on a **rolling 14-day close rate**.
+
+The discussion used a hypothetical **$75 per man-hour**, **70% close rate**, and an approximately **7% price increase**. These figures are examples, not adopted triggers, targets, thresholds, or a pricing formula.
+
+- Quote volume varies seasonally; no actual count was provided.
+- The assistant raised possible confounding from lead mix, service type, and other changes.
+- Unresolved quotes and small samples could distort a close-rate comparison.
+- Comparative tests were proposed by the assistant but have not been adopted.
+- No seasonal review model, automatic adjustment rule, experiment, or profit-first objective was approved.
+
+Before this proposal could become a rule, the close-rate denominator, treatment of open quotes, sufficient evidence, comparison method, and business objective would need to be clarified. Those remain questions, not new data-collection requirements.
+
 ### Pricing statement awaiting clarification
 
 The transcript fragment “prices regardless” is **[unclear / possible transcription error]**. It does not establish a pricing rule.
 
-Clarify whether Gavin meant anything about price consistency, profitability thresholds, geographic preference, or a different point before drawing a conclusion. No discount, premium, minimum price, or willingness-to-pay rule was agreed.
+Clarify whether Gavin meant anything about price consistency, profitability thresholds, geographic preference, or a different point before drawing a conclusion. No pricing rule follows from this fragment. The later fall quoting idea and close-rate proposal above are separately recorded and remain exploratory.
 
 ## Questions still to work through
 
@@ -120,11 +149,15 @@ The questions below are prompts for further discussion, not requirements or comm
 
 - How should gross revenue per hour be calculated across visit frequencies and seasonal work?
 - Is the time denominator employee labor hours, elapsed crew time, or another measure? Which travel, setup, handling, and service time belongs in it?
-- What minimum hourly revenue, if any, is acceptable? This question remains unanswered.
+- Is approximately $65 per man-hour a useful fall quoting level for net-new work, and what would establish a firm floor? The verified cost floor remains unknown.
 - Is a separate cost or margin check needed when two services have different materials, equipment, or other costs?
 - What makes an outside-Comanche-Trace opportunity valuable enough to pursue?
 - How should a promising future cluster be weighed against today's route efficiency?
 - The earlier “equally profitable” comparison has not been converted into a final formula or ranking rule.
+- Would the discussed fall rate continue throughout an annual agreement, or apply for a different period?
+- For a rolling 14-day close-rate measure, which quotes count, how are pending quotes handled, and how much evidence is enough when volume varies?
+- How would a price comparison distinguish price effects from changes in prospects, services, timing, and route fit?
+- How should quote decisions support growth of the Comanche Trace customer base while covering the costs of continued operation?
 
 ### 3. Schedule and capacity
 
@@ -173,4 +206,4 @@ No scoring system, mandatory form, numeric cutoff, response-time target, pilot, 
 
 ## Next discussion
 
-The next unresolved economic questions are the hourly minimum and which time belongs in the revenue-per-hour calculation. The ambiguous pricing fragment also remains open. Continue with concrete examples, including schedule compatibility, and record additional conclusions as stated preferences, proposals, or unresolved questions until Gavin explicitly decides otherwise.
+The next unresolved economic questions include the verified cost floor, which time belongs in the revenue-per-hour calculation, how long a fall quote would apply, and how to interpret close-rate evidence at variable quote volumes. The ambiguous pricing fragment also remains open. Continue with concrete examples, including schedule compatibility, and record additional conclusions as stated preferences, proposals, or unresolved questions until Gavin explicitly decides otherwise.
