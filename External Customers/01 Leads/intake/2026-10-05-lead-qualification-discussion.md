@@ -23,6 +23,30 @@ Exploratory discussion notes. These capture Gavin's stated direction, provisiona
 - **Current outcome:** Preserve the discussion and identify the next decisions. No SOP changes, implementation, approved qualification score, or new outreach activity is established here.
 - **Privacy:** This repository and the knowledge site's source directories are public. These notes contain no individual prospect records or customer contact details.
 
+## Current workflow described by Gavin
+
+This is Gavin's account of what happens today. It is source evidence for discussion, not a new procedure.
+
+1. Gavin opens **Jobber** and creates a new client.
+2. He collects the person's first and last name, service-property address, phone number, email address, and a description of the work wanted.
+3. He checks the schedule and books an assessment.
+
+### Assessment scheduling branches
+
+- **Customer present:** Gavin coordinates the customer's calendar with his own. He described this as creating more scheduling friction.
+- **Customer absent:** When the customer has given permission to go ahead and there are no off-limits areas, Gavin can perform the assessment at the soonest convenient time within that permission.
+
+No individual customer's details are included in these notes.
+
+### Current-state details still unknown
+
+- Whether out-of-area or out-of-scope requests are screened before record creation and scheduling, or afterward
+- Whether and how existing Jobber records are checked before creating a new client
+- How access permissions, restrictions, and off-limits areas are confirmed and recorded
+- The exact Jobber action or record type used to book the assessment, and how booking details are confirmed with the customer
+
+Gavin's later “Yes, that's fine” answered the separate request to keep publishing exploratory notes. It did **not** answer the question about screening timing or approve an SOP.
+
 ## Direction stated by Gavin
 
 ### Lead and qualified lead
@@ -219,7 +243,7 @@ The questions below are prompts for further discussion, not requirements or comm
 ### 7. Minimal information and learning
 
 - What is the smallest useful set of facts needed to choose the next step?
-- Where should those facts live, who acts next, and how do we avoid collecting the same information twice?
+- Gavin currently enters the described information in Jobber. Who acts next, and how should duplicate collection or duplicate records be avoided?
 - Which evidence would show whether the location strategy improves revenue mix and service efficiency?
 - How should the revenue-share measure be defined, including its time period?
 - What baseline exists today? None was supplied in this discussion.
