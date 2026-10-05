@@ -92,11 +92,29 @@ A **delayed visit that is made up** and a **permanently missed visit** need to r
 
 These are descriptions of practice, not instructions to issue a refund, credit an account, charge a card, or change billing settings. No customer transaction or identifying information is included.
 
+### Later clarification: component pricing and dispatcher decisions
+
+This clarification is based on Gavin's discussion. Jobber records were not inspected.
+
+**Service components:** Gavin said agreements individually price their monthly service components. He gave a hypothetical example:
+
+- Maintenance: **$200 per month**
+- Fertilization: **$35 per month**
+- Pre-emergent: **$30 per month**
+
+These are example amounts, not actual customer records or adopted rates. The explanation of the per-visit calculation was interrupted; **the exact per-visit formula has not been confirmed**. The monthly component prices alone do not establish how to value a permanently omitted visit.
+
+**Decision responsibility:** Gavin identified the **dispatcher role** as responsible for distinguishing delayed work from omitted work. No individual was named for that role.
+
+Customer preferences can differ: a customer may want a makeup visit as soon as feasible or may prefer to skip it. The dispatcher contacts the customer when applicable, asks their preference, and the decision comes down to the client.
+
+This records the described decision approach, not a guarantee that a particular makeup time is available. Capacity feasibility and settlement details remain open. **No automatic elapsed-time threshold for omission was approved.**
+
 ### Questions not settled by this account
 
-- How annual agreement value is allocated among services, components, and visits
+- How each individually priced monthly component translates into annual value and per-visit value
 - How to determine a permanently missed visit's value without confusing it with the equal monthly installment
-- When a delayed or potentially recoverable visit becomes permanently missed
+- How the dispatcher records and carries out the client's makeup-or-skip decision, including when a requested makeup is not feasible
 - How to distinguish work that was made up, omitted, or replaced by other work
 - How current-month refunds and future credits should be reconciled consistently, especially when the visit value exceeds one installment
 
