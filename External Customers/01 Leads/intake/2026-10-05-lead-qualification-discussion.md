@@ -83,6 +83,35 @@ Gavin clarified that the primary objective is to establish a stronghold and cust
 
 Long-term customer relationships, reputation, retention, referrals, and opportunities among neighboring properties overlap with that objective. No specific retention, referral, or additional-service requirement was set.
 
+### Specialized core first, broader service scope later
+
+Gavin confirmed the strategic sequence under discussion:
+
+1. Build dense Comanche Trace routes around a specialized core.
+2. Expand the **scope of services through new divisions** after sufficient metric standards have eventually been established.
+
+The later expansion is about service scope. No particular new division, launch date, staffing commitment, or numeric gate has been decided.
+
+Gavin discussed this **provisional revenue mix**:
+
+- **60–70%:** mowing, line trimming, and blowing
+- **15–25%:** fertilization
+- **Remainder:** other services
+
+The rationale is specialization, trainability, and equipment utilization. These ranges describe an exploratory future mix, not measured current revenue, quotas, or an approved operating target.
+
+### Observing the current bottleneck
+
+The discussion considered:
+
+- Labor hours priced or billed for work
+- Employee hours actually tracked
+- The share of time spent traveling
+
+Gavin explicitly wants this to be **observational for now**. Improvement attention should shift to whichever factor is the current bottleneck. No utilization target, travel-share limit, pricing-to-tracked-hours ratio, or other numeric standard was set.
+
+Definitions and comparable measurement boundaries still need clarification. These measures should not be treated as interchangeable with gross revenue per man-hour or net profit.
+
 ### Fall quoting direction under discussion
 
 - Gavin described approximately **$65 of gross revenue per man-hour** as a reasonable **fall quoting level for net-new customers and leads**.
@@ -194,8 +223,43 @@ The questions below are prompts for further discussion, not requirements or comm
 - Which evidence would show whether the location strategy improves revenue mix and service efficiency?
 - How should the revenue-share measure be defined, including its time period?
 - What baseline exists today? None was supplied in this discussion.
+- How should priced or billed labor hours, employee tracked hours, and travel share be defined and compared?
+- What evidence would identify the current bottleneck without turning exploratory observations into premature targets?
+- What would demonstrate that the specialized core is ready for a later service division? The necessary standards remain undefined.
 
 No scoring system, mandatory form, numeric cutoff, response-time target, pilot, or automation has been approved.
+
+## Broader TLC-OS context from the same discussion
+
+This section records why the Leads exploration matters to the larger system Gavin envisions. It does not change repository architecture or authorize a software implementation.
+
+### Ambition described by Gavin
+
+- Create a faithful written and digitized representation of real workflows, relationships, and constraints.
+- Bring incoming information from multiple sources into that understanding.
+- Identify the current bottleneck and use it to guide improvement attention.
+- Explore the implications of possible changes, such as hiring additional staff.
+- Keep improving the operating system as reality and the evidence change.
+
+These are ambitions and discussion context. No new integration, data pipeline, solver, automated decision, or staffing action was authorized.
+
+### Keep different kinds of claims separate
+
+The discussion should continue to distinguish:
+
+- **Hard constraints:** genuinely binding limits or obligations, with their source and applicability verified.
+- **Preferences:** desired directions that may involve tradeoffs, such as geographic concentration or a future revenue mix.
+- **Assumptions:** beliefs that still need evidence.
+- **Observations:** what is actually happening, with the measurement or account identified.
+- **Proposals:** possible changes or models that have not been adopted.
+
+Missing evidence should remain visible. A preference, provisional range, or assumption should not silently become a hard constraint.
+
+### Inspiration recalled, not verified
+
+Gavin recalled a Tobi Lütke / David Senra interview involving ShopifyOS, GitHub, and a SAT solver as inspiration for this broader idea.
+
+This is **Gavin's unverified recollection**, not a verified historical account or a claim that the referenced system had those exact capabilities. It does not establish that a SAT solver is appropriate for TLC-OS or authorize building one.
 
 ## Relationship to existing Leads documents
 
