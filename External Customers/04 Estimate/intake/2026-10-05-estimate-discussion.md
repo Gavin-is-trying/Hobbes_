@@ -116,6 +116,18 @@ The assistant raised the risk of **double correction** if an assessor changes th
 
 This is a concern for the future design to examine, not a selected control, implementation, or decision to prefer one approach over the other.
 
+## End-of-call checkpoint: resume here
+
+Gavin asked to note where the discussion stopped so it can be resumed shortly.
+
+The conversation paused at **what the customer-facing estimate contains**. Gavin had begun describing the requested services plus useful additional services identified during the assessment.
+
+That explanation is incomplete. Exclusions, the acceptance step, and Jobber layout constraints have not yet been described. Do not infer those details from the earlier calculations or from generic product behavior.
+
+**Resume with the customer-facing Estimate content. Do not move ahead to Follow-Up yet.**
+
+Gavin explicitly said not to look up Jobber documentation or pictures now. No such lookup was performed, and this checkpoint does not authorize one.
+
 ## Clarifications and unresolved questions
 
 - Whether an estimated hour means one worker's labor hour, elapsed crew time, or another basis
