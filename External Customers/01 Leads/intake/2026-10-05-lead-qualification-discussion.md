@@ -73,7 +73,7 @@ Gavin later described the information and downstream work for a request whose se
 - He sends the estimate to the customer for review. Optional recommendations are not recorded here as accepted services.
 - Price is addressed at the **estimate stage** in this described flow.
 
-The account moves through **Leads → Assessment → Estimate**. Where the repository's **Offer** stage fits remains unresolved. These notes do not move or remove that stage, approve an SOP, or authorize automation.
+The account initially moved through **Leads → Assessment → Estimate**, leaving the role of Offer unresolved at that point. The subsequent [Offer discussion](<../../02 Offer/intake/2026-10-05-offer-discussion.md>) records the general pitch and unique value proposition, which may come up before or during assessment rather than at a fixed chronological gate. These notes do not move or remove a lifecycle stage, approve an SOP, or authorize automation.
 
 ## Direction stated by Gavin
 
