@@ -98,6 +98,33 @@ This is Gavin's account of how the estimate works in Jobber. No Jobber records, 
 
 The required base applies to the general-maintenance estimate described here. It should not be extended into a requirement to buy maintenance on a treatment-only quote.
 
+### What each service line communicates
+
+Gavin described each service line as having:
+
+- A brief service name
+- A scope description when needed
+- An explicit service count over **12 months**
+- The monthly price
+
+For example, a biweekly mowing, trimming, and blowing line states **17 visits** over the 12-month period.
+
+### Annual allowance and flexible timing
+
+Gavin does not specify a fixed number of visits in each month or designate particular service months. He describes the growing season and a flexible distribution of the agreed visits.
+
+The annual count and the monthly installment are separate: the monthly price does not promise the same number of visits each month. Gavin described higher or lower visit totals being reconciled as needed through the agreement.
+
+Use **agreement** for the arrangement, consistent with Gavin's terminology preference. That word choice makes no legal conclusion.
+
+### Approval before an extra visit
+
+When asked whether the customer should approve both the **additional service and its price** before a visit beyond the annual allowance is performed, Gavin answered **yes**.
+
+This records the approval principle. No specific approval channel, lead time, or recording method was established, and no extra visit or charge was authorized by this discussion.
+
+The [Offer discussion](<../../02 Offer/intake/2026-10-05-offer-discussion.md>) records the missed-visit credit principle. **The settlement method remains open**; these clarifications do not choose a refund, future credit, or other default.
+
 ## Proposed future assessor ratings
 
 Gavin discussed a possible **1–10 rating** of assessor criteria to support more consistent adjustments.
@@ -137,9 +164,11 @@ This is a concern for the future design to examine, not a selected control, impl
 
 The earlier pause at customer-facing Estimate contents has been followed by the general-maintenance base and optional-line description above.
 
-The current discussion is moving to **clarity of visit counts in the estimate**. Exclusions, the acceptance step, and the remaining Jobber layout constraints have not yet been described. The checkbox mechanism is user-reported, not independently verified.
+The resumed discussion has now covered **service-line contents, annual visit counts with flexible growing-season timing, and approval of additional service and price before an extra visit**.
 
-**Continue with Estimate and visit-count clarity. Do not move ahead to Follow-Up yet.**
+Exclusions, the full estimate acceptance step, the extra-visit approval method, and the remaining Jobber layout constraints have not yet been described. The checkbox mechanism is user-reported, not independently verified.
+
+**Continue within Estimate from these remaining questions. Do not move ahead to Follow-Up yet.**
 
 Gavin's restriction on looking up Jobber documentation or pictures remains in place. No such lookup was performed.
 
