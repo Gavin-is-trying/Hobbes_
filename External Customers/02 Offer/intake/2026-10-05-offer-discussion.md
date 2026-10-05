@@ -40,7 +40,9 @@ Offer is therefore not established here as a fixed chronological gate between Le
 - The annual value of the selected services is divided into **12 equal monthly installments**.
 - The predictable monthly amount is part of the customer's experience.
 
-This describes the structure discussed. It does not define exception criteria, specific contract terms, a service schedule, or consent to any payment action. Actual labor estimating and quote-time rate discussion remain in the linked Leads notes.
+This describes the structure discussed. It does not define exception criteria, specific agreement terms, a service schedule, or consent to any payment action. Actual labor estimating and quote-time rate discussion remain in the linked Leads notes.
+
+Gavin specified the term **agreement**, rather than contract. This records his terminology preference and makes no legal conclusion about the arrangement.
 
 ## UVP as a constituent part of Offer
 
@@ -71,7 +73,7 @@ The payment example does not authorize storing a card, changing settings, chargi
 
 ## Weather disruption and missed-visit reconciliation
 
-This operational discussion is connected to the UVP: communication, reliability, predictable billing, and how an interruption is handled are all part of the customer's experience. The account below records current practice and unresolved questions; it does not establish a new policy.
+This operational discussion is connected to the UVP: communication, reliability, predictable billing, and how an interruption is handled are all part of the customer's experience. The account below records current practice, principles Gavin confirmed during the discussion, and unresolved questions. The full reconciliation system and terms remain unapproved.
 
 ### Communication and rescheduling described by Gavin
 
@@ -80,7 +82,7 @@ This operational discussion is connected to the UVP: communication, reliability,
 - For an isolated one-day weather disruption, he gives a feasible, concrete replacement time when one can be established.
 - Prolonged unsuitable conditions can mean a visit is permanently lost rather than merely delayed.
 
-A **delayed visit that is made up** and a **permanently missed visit** need to remain distinct. These notes do not make every schedule delay a refund event or assume every missed date is later made up.
+A **delayed visit that is made up** and a **permanently missed visit** need to remain distinct. Gavin's later credit principle for any missed visit is recorded below. How any later makeup work interacts with that reconciliation remains to be clarified.
 
 ### Billing and adjustments described by Gavin
 
@@ -102,7 +104,7 @@ This clarification is based on Gavin's discussion. Jobber records were not inspe
 - Fertilization: **$35 per month**
 - Pre-emergent: **$30 per month**
 
-These are example amounts, not actual customer records or adopted rates. The explanation of the per-visit calculation was interrupted; **the exact per-visit formula has not been confirmed**. The monthly component prices alone do not establish how to value a permanently omitted visit.
+These are example amounts, not actual customer records or adopted rates. The first explanation of the per-visit calculation was interrupted and initially remained unconfirmed. Gavin subsequently confirmed the maintenance formula recorded below; formulas for the other components remain unresolved.
 
 **Decision responsibility:** Gavin identified the **dispatcher role** as responsible for distinguishing delayed work from omitted work. No individual was named for that role.
 
@@ -110,15 +112,27 @@ Customer preferences can differ: a customer may want a makeup visit as soon as f
 
 This records the described decision approach, not a guarantee that a particular makeup time is available. Capacity feasibility and settlement details remain open. **No automatic elapsed-time threshold for omission was approved.**
 
+### Confirmed credit principle and maintenance calculation
+
+Gavin stated that **any missed visit, whatever the reason, should have its value credited to the customer in some form**. This includes a customer choosing to skip a visit. **Choosing to skip does not waive the adjustment.**
+
+For maintenance under the typical 12-month agreement, the calculation discussed was:
+
+**Maintenance visit value = monthly maintenance component × 12 ÷ agreed annual maintenance visit count**
+
+When asked whether that calculation was correct, Gavin answered: “Yes, that's correct”.
+
+The formula applies to the maintenance component, rather than the full monthly installment including other services. No formula for nonannual arrangements or other service components was established. The confirmed calculation and credit principle do not themselves authorize an actual refund, credit, or other account transaction.
+
 ### Questions not settled by this account
 
-- How each individually priced monthly component translates into annual value and per-visit value
-- How to determine a permanently missed visit's value without confusing it with the equal monthly installment
+- How the non-maintenance components are allocated to visits or other units of delivery
+- How any arrangement other than the typical 12-month agreement should be valued
 - How the dispatcher records and carries out the client's makeup-or-skip decision, including when a requested makeup is not feasible
 - How to distinguish work that was made up, omitted, or replaced by other work
 - How current-month refunds and future credits should be reconciled consistently, especially when the visit value exceeds one installment
 
-No allocation formula, refund entitlement, weather exception, or final reconciliation rule has been adopted here.
+The maintenance formula and missed-visit credit principle above are confirmed discussion statements. The complete operating procedure, settlement mechanics, other-component allocation, and terms remain unresolved.
 
 ### Next work requested
 
