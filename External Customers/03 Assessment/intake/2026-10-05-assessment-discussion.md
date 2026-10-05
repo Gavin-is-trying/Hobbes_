@@ -28,6 +28,8 @@ Gavin described **onsite work** and **offsite research** as complementary parts 
 
 ### Onsite work
 
+Gavin later clarified that he personally performs all onsite assessments. The [Estimate discussion](<../../04 Estimate/intake/2026-10-05-estimate-discussion.md>) records how he turns this information into task-time estimates and prices.
+
 Gavin gathers information such as:
 
 - Photos and videos
