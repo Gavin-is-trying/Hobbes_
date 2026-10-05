@@ -124,19 +124,33 @@ When asked whether that calculation was correct, Gavin answered: “Yes, that's 
 
 The formula applies to the maintenance component, rather than the full monthly installment including other services. No formula for nonannual arrangements or other service components was established. The confirmed calculation and credit principle do not themselves authorize an actual refund, credit, or other account transaction.
 
+### Special note: settlement method is expressly open
+
+Gavin explicitly wants to decide the settlement method **later**. The options to consider are:
+
+- A credit against a future bill
+- A refund of a previous charge
+- A combination, or another agreed method
+
+**No default has been selected.** The confirmed principle that a missed visit's value is owed back in some form does not choose among those methods or authorize automatically applying one.
+
+The current-practice examples above are descriptive. They are not an adopted default. Keep this as an open decision without pressing for a choice now.
+
 ### Questions not settled by this account
 
 - How the non-maintenance components are allocated to visits or other units of delivery
 - How any arrangement other than the typical 12-month agreement should be valued
 - How the dispatcher records and carries out the client's makeup-or-skip decision, including when a requested makeup is not feasible
 - How to distinguish work that was made up, omitted, or replaced by other work
-- How current-month refunds and future credits should be reconciled consistently, especially when the visit value exceeds one installment
+- Which settlement method to select later, and how to reconcile it consistently when the visit value exceeds one installment; no automatic credit or refund default is established
 
 The maintenance formula and missed-visit credit principle above are confirmed discussion statements. The complete operating procedure, settlement mechanics, other-component allocation, and terms remain unresolved.
 
 ### Next work requested
 
-Gavin requested a standard reconciliation system for review, followed by terms-of-service work. A reviewable proposal is the next step; these source notes do not approve that proposal or adopt terms. No terms-of-service wording is created in this intake.
+Gavin requested a standard reconciliation system for review, followed by a **simple, clear TLC Terms of Service** that explains the company's boundaries in understandable language. The intended document should contain the selected policies for a customer to agree to **before service begins**.
+
+A reviewable proposal is the next step. Settlement method remains deferred, and these source notes do not approve a proposal, adopt final terms, change any customer's terms, or authorize transactions. No terms-of-service wording is created in this intake.
 
 ## Work still to do
 
