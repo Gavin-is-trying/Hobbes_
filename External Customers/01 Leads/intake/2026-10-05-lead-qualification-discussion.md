@@ -49,6 +49,34 @@ Gavin answered yes to prioritizing an isolated Comanche Trace prospect over an e
 
 This records the preference in that specific comparison. It does not establish how much profitability, travel time, capacity, or other fit to sacrifice in different cases.
 
+### Service fit stated during the discussion
+
+For this qualification exercise, Gavin identified these services as a fit:
+
+- Routine mowing, trimming, edging, and blowing
+- Fertilization
+- Lawn weed control
+- Shrub and hedge trimming
+- Mulch and bed maintenance
+- Seasonal pre-emergent and post-emergent applications
+- Core aeration
+
+He identified these services as outside the desired fit:
+
+- Tree trimming above reachable shrub height
+- Irrigation repair
+- Pest and disease treatments
+
+These statements capture the current qualification discussion. They do not assert what the business has or has not supplied historically, or implement a service policy.
+
+### Economic fit stated during the discussion
+
+- Gavin does not want a fixed minimum monthly account amount.
+- He prefers **gross revenue per hour** over the raw dollar value of an account when judging economic fit.
+- A hypothetical account at **$100 per month with a 20-minute service visit** was discussed. The number of visits per year was not specified, so no hourly rate can be inferred from that example.
+- The minimum acceptable hourly revenue remains unanswered.
+- The assistant suggested annual revenue divided by annual labor hours, including travel and setup. That denominator and time scope have **not been confirmed by Gavin**.
+
 ## Provisional ideas discussed
 
 These are discussion proposals, not approved rules or final rankings.
@@ -84,18 +112,19 @@ The questions below are prompts for further discussion, not requirements or comm
 
 ### 1. Service fit
 
-- Which services are wanted, and which can the business reliably deliver?
-- How should recurring maintenance compare with one-time work?
-- Are there requests that should be declined or referred regardless of location?
+- How should recurring maintenance compare with one-time work within the service-fit list above?
+- What should happen when a request mixes services that fit with services that do not?
 - What must be known at first contact, and what can wait until assessment?
 
 ### 2. Economics and exceptions
 
-- What does “equally profitable” mean for comparisons: contribution per visit, per labor hour, over a season, or another measure?
-- Which travel, setup, handling, and service costs should be included?
+- How should gross revenue per hour be calculated across visit frequencies and seasonal work?
+- Is the time denominator employee labor hours, elapsed crew time, or another measure? Which travel, setup, handling, and service time belongs in it?
+- What minimum hourly revenue, if any, is acceptable? This question remains unanswered.
+- Is a separate cost or margin check needed when two services have different materials, equipment, or other costs?
 - What makes an outside-Comanche-Trace opportunity valuable enough to pursue?
 - How should a promising future cluster be weighed against today's route efficiency?
-- Are any minimum economic thresholds useful? None have been set.
+- The earlier “equally profitable” comparison has not been converted into a final formula or ranking rule.
 
 ### 3. Schedule and capacity
 
@@ -144,4 +173,4 @@ No scoring system, mandatory form, numeric cutoff, response-time target, pilot, 
 
 ## Next discussion
 
-Clarify the pricing fragment, then work through service fit and economics with concrete examples. Any additional conclusions should be recorded as stated preferences, proposals, or unresolved questions until Gavin explicitly decides otherwise.
+The next unresolved economic questions are the hourly minimum and which time belongs in the revenue-per-hour calculation. The ambiguous pricing fragment also remains open. Continue with concrete examples, including schedule compatibility, and record additional conclusions as stated preferences, proposals, or unresolved questions until Gavin explicitly decides otherwise.
