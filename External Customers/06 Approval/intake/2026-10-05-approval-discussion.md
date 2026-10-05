@@ -90,6 +90,24 @@ If an issue persists, Gavin described discussing it with the client and possibly
 
 The assistant's suggestion of basic practical instructions instead of penalty language remains **a proposal only**. No instructions or terms were adopted.
 
+## Address confirmation stays upstream
+
+Gavin said address confirmation belongs in intake and the onsite assessment, outside Approval. It should not be duplicated as another approval gate.
+
+The [Assessment discussion](<../../03 Assessment/intake/2026-10-05-assessment-discussion.md>) retains the property-information context. This records the boundary discussed; no additional check or workflow change was implemented.
+
+## Final reconciliation principle described
+
+Gavin described the comparison for final reconciliation as:
+
+**Delivered service value = sum, across services, of each service's agreed per-visit value × actual completed visits**
+
+Compare that total with the **amount charged**.
+
+“Charged” is the basis he named. These notes do **not** silently substitute cash paid. The treatment of unpaid charges, cash actually paid, prior refunds, and earlier credits remains an unresolved accounting distinction.
+
+This principle does not establish the per-visit value of every service, settle the remaining cancellation details, introduce new fees or repricing, or authorize a refund, credit, or collection action. The settlement method remains open.
+
 ## Broader systems context
 
 Gavin described a systems approach of understanding **the current state**, defining **the desired state**, and finding **the fewest steps between them**. This interview includes aspirations as well as observations; they need to remain distinguishable.
@@ -98,6 +116,16 @@ The earlier [Leads discussion](<../../01 Leads/intake/2026-10-05-lead-qualificat
 
 This Approval intake records the concept as context. It does not build a system, add an integration, or turn an aspiration into a hard requirement.
 
+## End-of-call checkpoint: stay in Approval
+
+Gavin paused the discussion and said he will call back when available.
+
+**Resume within Approval. Do not advance to Production yet.**
+
+The next discussion should continue with any material pre-service prerequisites, card-on-file exceptions and transition for existing customers, and the remaining cancellation and reconciliation details. Address confirmation stays upstream rather than becoming another approval gate.
+
+No further interview, Jobber investigation, or implementation is initiated by this checkpoint.
+
 ## Questions still open
 
 - The exact current Jobber steps and status transitions
@@ -105,6 +133,7 @@ This Approval intake records the concept as context. It does not build a system,
 - What payment-method and charge-consent wording is appropriate while preserving the stated choice not to require automatic charging
 - Which proposed safeguards become selected policies in the future Terms of Service, including whether access or waste language belongs there
 - How external-channel approvals should connect to the final selected scope and terms
+- Remaining cancellation details and how final reconciliation distinguishes amount charged, cash paid, unpaid amounts, prior refunds, and prior credits
 
 These questions do not authorize a Jobber investigation now. No customer outreach, payment action, retroactive agreement change, approval-setting change, or implementation was performed.
 
