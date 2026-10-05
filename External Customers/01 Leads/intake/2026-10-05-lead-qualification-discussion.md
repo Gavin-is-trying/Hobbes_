@@ -51,7 +51,7 @@ No individual customer's details are included in these notes.
 - Whether out-of-area or out-of-scope requests are screened before record creation and scheduling, or afterward
 - Whether and how existing Jobber records are checked before creating a new client
 - How access permissions, restrictions, and off-limits areas are confirmed and recorded
-- The exact Jobber action or record type used to book the assessment, and how booking details are confirmed with the customer
+- The exact Jobber booking action and customer confirmation were initially unknown. The later [Assessment discussion](<../../03 Assessment/intake/2026-10-05-assessment-discussion.md>) records Gavin's Request-to-scheduled-Assessment description; the UI mechanics and confirmation details remain unverified.
 
 Gavin's later “Yes, that's fine” answered the separate request to keep publishing exploratory notes. It did **not** answer the question about screening timing or approve an SOP.
 
