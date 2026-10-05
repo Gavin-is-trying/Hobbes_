@@ -89,6 +89,33 @@ Gavin discussed a possible **1–10 rating** of assessor criteria to support mor
 
 This remains a proposal. No rubric, criteria list, weights, score-to-price conversion, or automatic adjustment was established. It should not be treated as a completed tool or an instruction to build one.
 
+## Calibration from actual service time
+
+### Current observation
+
+Gavin said he currently sees or tracks actual service time against the estimated time and observes when work takes longer or less time than expected. This is his account of current practice; no underlying time records were inspected.
+
+### Possible future correction and feedback
+
+Gavin wants to explore a manual or autonomous future system that aggregates percentage error across accepted estimates or agreements and uses that evidence to correct bias in future estimates.
+
+A hypothetical example was actual service taking **10% longer** over some sample, leading to a possible adjustment factor. The sample size, period, and calculation were not specified. This is an illustration, not an observed result or an adopted factor.
+
+Two complementary possibilities remain open:
+
+- An adjustment factor applied to future estimates
+- Feedback that improves the assessor's mental model of task time
+
+When asked whether to keep both possibilities open, Gavin answered: “Yes, exactly”.
+
+No factor, error formula, observation window, grouping method, minimum sample, or automated system was approved.
+
+### Assistant concern to examine
+
+The assistant raised the risk of **double correction** if an assessor changes the underlying time estimate in response to the same evidence and a separate factor also compensates for it.
+
+This is a concern for the future design to examine, not a selected control, implementation, or decision to prefer one approach over the other.
+
 ## Clarifications and unresolved questions
 
 - Whether an estimated hour means one worker's labor hour, elapsed crew time, or another basis
@@ -96,6 +123,8 @@ This remains a proposal. No rubric, criteria list, weights, score-to-price conve
 - The precise boundary between the task-time estimate and the monetary judgment
 - Which monetary basis after adjustments and rounding is used for missed-visit reconciliation
 - How nonannual arrangements should be handled
+- Where the original time/price baseline and final client price are stored; the storage question remains pending
+- How future calibration would define error, select comparable observations, and avoid applying the same correction twice
 
 The [Offer discussion](<../../02 Offer/intake/2026-10-05-offer-discussion.md>) records the confirmed maintenance missed-visit calculation and the still-open settlement choice. This intake does not change that formula, select a credit/refund method, or settle the final adjusted-and-rounded price basis.
 
