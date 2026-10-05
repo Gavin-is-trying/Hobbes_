@@ -168,7 +168,7 @@ The resumed discussion has now covered **service-line contents, annual visit cou
 
 Exclusions, the full estimate acceptance step, the extra-visit approval method, and the remaining Jobber layout constraints have not yet been described. The checkbox mechanism is user-reported, not independently verified.
 
-**Continue within Estimate from these remaining questions. Do not move ahead to Follow-Up yet.**
+**The discussion has now continued into [Follow-Up](<../../05 Follow-Up/intake/2026-10-05-follow-up-discussion.md>).** The remaining Estimate questions above are still open; moving to the next discussion does not settle them.
 
 Gavin's restriction on looking up Jobber documentation or pictures remains in place. No such lookup was performed.
 
