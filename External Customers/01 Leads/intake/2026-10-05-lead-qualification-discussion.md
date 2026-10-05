@@ -31,6 +31,14 @@ This is Gavin's account of what happens today. It is source evidence for discuss
 2. He collects the person's first and last name, service-property address, phone number, email address, and a description of the work wanted.
 3. He checks the schedule and books an assessment.
 
+### Informal screening described
+
+Gavin described informal screening based partly on the tone of a call and the questions asked. This is a self-reported judgment practice; no standardized rule or validated inference was established.
+
+He wants customers who value the service being provided, rather than making the lowest bid their only selection criterion. The discussion does not establish anyone's income or other personal characteristics from how they speak.
+
+The assistant recommended using observable information about the requested service, budget, and expectations to assess fit. That recommendation has not been adopted as a procedure.
+
 ### Assessment scheduling branches
 
 - **Customer present:** Gavin coordinates the customer's calendar with his own. He described this as creating more scheduling friction.
@@ -86,6 +94,14 @@ Contactability describes the lead definition. It does not establish permission t
 - The desired service pattern is a compact cluster where an employee can park once and work through a service day.
 - Driving efficiency matters. Location should help build this pattern rather than merely place more customers somewhere within the same community.
 - High-value customers outside Comanche Trace remain worth considering. The geographic preference is not a hard exclusion rule.
+
+### Specific no-service area stated by Gavin
+
+Gavin explicitly identified **Ranchero Road** as an absolute no-service area, irrespective of property value or who lives at a property.
+
+This records his stated geographic exclusion during the exploration. It does not establish a claim about residents or authorize implementation of a screening system.
+
+Other Kerrville exclusions have not been enumerated. **Lytle and Myrtle are not confirmed exclusions.** No additional no-service areas should be inferred.
 
 ### A tradeoff tested in the discussion
 
@@ -168,6 +184,23 @@ Definitions and comparable measurement boundaries still need clarification. Thes
 ## Provisional ideas discussed
 
 These are discussion proposals, not approved rules or final rankings.
+
+### Future address-first screening idea
+
+Gavin proposed checking the service-property address **before collecting the rest of the contact details**. Where geography would lead to declining the work, this could avoid collecting further information that is unnecessary for that request.
+
+This is a future-flow proposal. The current workflow described above remains Jobber client creation, collection of details, and assessment scheduling; the timing of current geographic screening is still unknown.
+
+Gavin also described a possible TLC-OS lead-flow page that would take an address and show its geographic tier or priority. **No page, application, integration, or automated screening build was authorized.**
+
+### No-service tier versus an exclusion gate
+
+- Gavin proposed a **fourth, no-service tier** alongside the three priority tiers below.
+- The assistant proposed treating no-service areas as a **hard exclusion gate before the three priority tiers** instead.
+- That gate structure has **not been adopted**.
+- Manual review for an unknown or ambiguous address was another assistant proposal, also **not adopted**.
+
+The choice of structure, treatment of uncertain addresses, and full list of exclusions remain unresolved. The explicitly stated Ranchero Road exclusion should not be expanded to other areas by assumption.
 
 ### Three possible location tiers
 
@@ -259,6 +292,8 @@ The questions below are prompts for further discussion, not requirements or comm
 - Are the requested service standard, scope, communication, and schedule expectations compatible?
 - What needs to be explained early to avoid an unsuitable estimate or an avoidable mismatch?
 - Which concerns should prompt clarification rather than immediate rejection?
+- What observable service, budget, or expectation mismatch would support a fit decision, instead of relying only on conversational impressions?
+- How should a geography-based decline be explained, and what information is actually needed before that decision?
 
 ### 7. Minimal information and learning
 
@@ -269,6 +304,8 @@ The questions below are prompts for further discussion, not requirements or comm
 - What baseline exists today? None was supplied in this discussion.
 - How should priced or billed labor hours, employee tracked hours, and travel share be defined and compared?
 - What evidence would identify the current bottleneck without turning exploratory observations into premature targets?
+- Should the proposed address-first flow use a separate no-service tier or an exclusion gate, and how should unknown addresses be handled?
+- Which other geographic exclusions, if any, does Gavin explicitly want? The list is incomplete.
 - What would demonstrate that the specialized core is ready for a later service division? The necessary standards remain undefined.
 
 No scoring system, mandatory form, numeric cutoff, response-time target, pilot, or automation has been approved.
