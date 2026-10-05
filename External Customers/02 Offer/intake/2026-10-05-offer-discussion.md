@@ -69,6 +69,43 @@ The value proposition therefore includes the experience around the maintenance w
 
 The payment example does not authorize storing a card, changing settings, charging a customer, or bypassing payment consent. The perceived-security theme is not a security guarantee or a verified comparison of payment methods. No card numbers, access credentials, or customer payment arrangements are included.
 
+## Weather disruption and missed-visit reconciliation
+
+This operational discussion is connected to the UVP: communication, reliability, predictable billing, and how an interruption is handled are all part of the customer's experience. The account below records current practice and unresolved questions; it does not establish a new policy.
+
+### Communication and rescheduling described by Gavin
+
+- Gavin contacts customers about disruptions by text, email, or phone.
+- When weather remains uncertain, he does not give a firm replacement date.
+- For an isolated one-day weather disruption, he gives a feasible, concrete replacement time when one can be established.
+- Prolonged unsuitable conditions can mean a visit is permanently lost rather than merely delayed.
+
+A **delayed visit that is made up** and a **permanently missed visit** need to remain distinct. These notes do not make every schedule delay a refund event or assume every missed date is later made up.
+
+### Billing and adjustments described by Gavin
+
+- Bills are issued on the **1st** and due on the **15th**, for that month.
+- Current adjustments may be a partial refund against the current month or a deduction from the next month's amount.
+- The value assigned to a missed visit can sometimes exceed a monthly installment.
+- In that situation, the adjustment may be split between a current refund and a credit toward the next month.
+- Gavin described this reconciliation process as **not yet standardized**.
+
+These are descriptions of practice, not instructions to issue a refund, credit an account, charge a card, or change billing settings. No customer transaction or identifying information is included.
+
+### Questions not settled by this account
+
+- How annual agreement value is allocated among services, components, and visits
+- How to determine a permanently missed visit's value without confusing it with the equal monthly installment
+- When a delayed or potentially recoverable visit becomes permanently missed
+- How to distinguish work that was made up, omitted, or replaced by other work
+- How current-month refunds and future credits should be reconciled consistently, especially when the visit value exceeds one installment
+
+No allocation formula, refund entitlement, weather exception, or final reconciliation rule has been adopted here.
+
+### Next work requested
+
+Gavin requested a standard reconciliation system for review, followed by terms-of-service work. A reviewable proposal is the next step; these source notes do not approve that proposal or adopt terms. No terms-of-service wording is created in this intake.
+
 ## Work still to do
 
 The discussion calls for a concrete pitch later. No final pitch or external marketing language has been approved.
