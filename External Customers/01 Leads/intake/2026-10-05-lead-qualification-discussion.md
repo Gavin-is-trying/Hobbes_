@@ -47,6 +47,26 @@ No individual customer's details are included in these notes.
 
 Gavin's later “Yes, that's fine” answered the separate request to keep publishing exploratory notes. It did **not** answer the question about screening timing or approve an SOP.
 
+## Additional assessment and estimate details
+
+Gavin later described the information and downstream work for a request whose service address is considered acceptable. These details do not change the earlier reported intake order or establish a new screening procedure. The geographic-gate wording remains unresolved; no conclusion is drawn that excluded requests should proceed.
+
+### Information and assessment
+
+- The information collected includes first and last name, email, service-property address, phone number, and assessment access arrangements.
+- The assessment may happen with the customer present or absent, subject to the agreed access.
+- Gavin gathers images or video, property-specific quirks, and the answers to questions needed to estimate annual labor.
+- No actual customer records, access codes, images, or videos are included in these discussion notes.
+
+### Estimate preparation and review
+
+- Gavin calculates labor hours for a **typical 12-month agreement**, using the rate applicable when the quote is prepared.
+- He may recommend suitable optional services, such as fertilization or pre-emergent applications, even if the customer did not initially request them.
+- He sends the estimate to the customer for review. Optional recommendations are not recorded here as accepted services.
+- Price is addressed at the **estimate stage** in this described flow.
+
+The account moves through **Leads → Assessment → Estimate**. Where the repository's **Offer** stage fits remains unresolved. These notes do not move or remove that stage, approve an SOP, or authorize automation.
+
 ## Direction stated by Gavin
 
 ### Lead and qualified lead
@@ -142,7 +162,7 @@ Definitions and comparable measurement boundaries still need clarification. Thes
 - This is a working pricing idea for discussion, not a net-profit figure, an approved minimum, or an instruction to change prices.
 - Covering the costs needed to keep operating the next day matters. The actual cost floor has not been verified.
 - Immediate profit is not the overriding objective in this discussion. Gavin emphasized long-term customer value, relationships, reputation, and establishing the desired Comanche Trace customer base.
-- It remains unclear whether a fall quote would apply throughout an annual agreement, how long it would be held, and which costs and labor time the rate must cover.
+- The later assessment/estimate account above describes using the quote-time rate to estimate a typical 12-month agreement. Quote validity, any later price-change terms, and the full cost and labor-time basis remain unspecified.
 - No repricing of existing customers or actual quote changes were authorized.
 
 ## Provisional ideas discussed
@@ -207,7 +227,7 @@ The questions below are prompts for further discussion, not requirements or comm
 - What makes an outside-Comanche-Trace opportunity valuable enough to pursue?
 - How should a promising future cluster be weighed against today's route efficiency?
 - The earlier “equally profitable” comparison has not been converted into a final formula or ranking rule.
-- Would the discussed fall rate continue throughout an annual agreement, or apply for a different period?
+- For an estimate based on a typical 12-month agreement, what quote-validity or later price-change terms apply? Those terms were not discussed.
 - For a rolling 14-day close-rate measure, which quotes count, how are pending quotes handled, and how much evidence is enough when volume varies?
 - How would a price comparison distinguish price effects from changes in prospects, services, timing, and route fit?
 - How should quote decisions support growth of the Comanche Trace customer base while covering the costs of continued operation?
@@ -294,4 +314,4 @@ This is **Gavin's unverified recollection**, not a verified historical account o
 
 ## Next discussion
 
-The next unresolved economic questions include the verified cost floor, which time belongs in the revenue-per-hour calculation, how long a fall quote would apply, and how to interpret close-rate evidence at variable quote volumes. The ambiguous pricing fragment also remains open. Continue with concrete examples, including schedule compatibility, and record additional conclusions as stated preferences, proposals, or unresolved questions until Gavin explicitly decides otherwise.
+The next unresolved economic questions include the verified cost floor, which time belongs in the revenue-per-hour calculation, quote validity and any later price-change terms, and how to interpret close-rate evidence at variable quote volumes. The ambiguous pricing fragment also remains open. Continue with concrete examples, including schedule compatibility, and record additional conclusions as stated preferences, proposals, or unresolved questions until Gavin explicitly decides otherwise.
