@@ -83,6 +83,21 @@ Gavin said he generally rounds monthly amounts **up**:
 
 Rounding is a separate step from time estimation and discretionary monetary adjustment. This records his described practice; no pricing automation or exact rounding implementation was approved.
 
+## Customer-facing general-maintenance estimates
+
+Gavin described the following structure for **general-maintenance estimates**:
+
+- The base mowing, line trimming, and blowing service is required and nonoptional.
+- Additional services, such as fertilization, pre-emergent, and core aeration, appear as separate optional lines.
+- The customer selects optional services using checkboxes.
+- Those selections update the **monthly subtotal**.
+
+Gavin used “immutable” to mean that the customer cannot deselect the base service. It does **not** mean the price is fixed or exempt from the estimating, adjustment, or rounding discussion above.
+
+This is Gavin's account of how the estimate works in Jobber. No Jobber records, documentation, or pictures were inspected. These notes describe the reported mechanism and do not authorize changing a quote or making selections for a customer.
+
+The required base applies to the general-maintenance estimate described here. It should not be extended into a requirement to buy maintenance on a treatment-only quote.
+
 ## Proposed future assessor ratings
 
 Gavin discussed a possible **1–10 rating** of assessor criteria to support more consistent adjustments.
@@ -118,15 +133,15 @@ This is a concern for the future design to examine, not a selected control, impl
 
 ## End-of-call checkpoint: resume here
 
-Gavin asked to note where the discussion stopped so it can be resumed shortly.
+**Updated after the conversation resumed.**
 
-The conversation paused at **what the customer-facing estimate contains**. Gavin had begun describing the requested services plus useful additional services identified during the assessment.
+The earlier pause at customer-facing Estimate contents has been followed by the general-maintenance base and optional-line description above.
 
-That explanation is incomplete. Exclusions, the acceptance step, and Jobber layout constraints have not yet been described. Do not infer those details from the earlier calculations or from generic product behavior.
+The current discussion is moving to **clarity of visit counts in the estimate**. Exclusions, the acceptance step, and the remaining Jobber layout constraints have not yet been described. The checkbox mechanism is user-reported, not independently verified.
 
-**Resume with the customer-facing Estimate content. Do not move ahead to Follow-Up yet.**
+**Continue with Estimate and visit-count clarity. Do not move ahead to Follow-Up yet.**
 
-Gavin explicitly said not to look up Jobber documentation or pictures now. No such lookup was performed, and this checkpoint does not authorize one.
+Gavin's restriction on looking up Jobber documentation or pictures remains in place. No such lookup was performed.
 
 ## Clarifications and unresolved questions
 
